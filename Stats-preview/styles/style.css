@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    background-color: hsl(233, 47%, 7%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.showcase {
+ width: 1000px;
+ font-size: 15px;
+ background-color:hsl(244, 38%, 16%);
+ border-radius: 0.5rem;
+ display: flex;
+ overflow: hidden;
+}
+
+.showcase--info {
+    width: 50%;
+    padding: 4rem 6rem 4rem 4rem;
+}
+
+.showcase--info h1 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.showcase--info h1 span {
+    color: hsl(277, 64%, 61%);
+}
+
+.showcase--info p {
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.showcase .stats {
+    font-family: Lexend Deca, sans-serif;
+    color: hsla(0, 0%, 100%, 0.6);
+    text-transform: uppercase;
+    display: flex;
+}
+
+.showcase .stats li {
+    margin-right: 3rem;
+}
+
+.showcase .stats span {
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff;
+    display: block;
+}
+
+.showcase--image {
+    width: 50%;
+    position: relative;
+}
+
+.showcase--image img {
+    width: 100%;
+    height: 100%;
+}
+
+.showcase--image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: hsl(277, 71%, 36%);
+    opacity: 0.6;
+}
+
+@media(max-width: 1100px) {
+    body {
+        height: 100%;
+        padding: 5rem 2rem;
+    }
+    .showcase {
+        flex-direction: column;
+        flex-flow: column-reverse;
+        text-align: center;
+        width: 375px;
+    }
+
+    .showcase--info, .showcase--image {
+        width: 100%;
+    }
+
+    .showcase--info {
+        padding: 1.5rem;
+    }
+
+    .showcase h1 {
+        font-size: 1.6rem;
+    }
+
+    .showcase .stats {
+        flex-direction: column;
+    }
+
+    .showcase .stats li {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}

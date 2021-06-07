@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Kumbh Sans, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: hsl(229, 23%, 23%);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../images/bg-pattern-top.svg") no-repeat right 50vw bottom
+      50vh,
+    url("../images/bg-pattern-bottom.svg") no-repeat 50vw 50vh,
+    hsl(185, 75%, 39%);
+}
+
+.card {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("../images/bg-pattern-card.svg") no-repeat left top, #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 100px hsl(186, 61%, 37%);
+}
+
+.card span {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: hsl(227, 10%, 46%);
+}
+
+.card .profile-img {
+  height: 105px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 90px 0 1.5rem;
+}
+
+.card .name {
+  font-size: inherit;
+  margin-bottom: 0.5rem;
+}
+
+.card .country {
+  margin-bottom: 1.5rem;
+}
+
+.card .age {
+  display: inline-block;
+  font-size: inherit;
+}
+
+.card .stats {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  border-top: 1px solid hsl(0, 0%, 87%);
+  padding: 1.5rem 3.5rem 1.5rem 3rem;
+}
+
+.card .stats span {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  color: hsl(0, 0%, 59%);
+}

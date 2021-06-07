@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cards {
+    max-width: 1000px;
+    display: flex;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.card {
+    font-family: Lexend Deca, sans-serif;
+    padding: 8rem 4rem 4rem;
+}
+
+.card-orange {
+    background: url('../images/icon-sedans.svg') no-repeat 4rem 4rem;
+    background-color: hsl(31, 77%, 52%);
+    color: hsl(31, 77%, 52%);
+}
+
+.card-cyan {
+    background: url('../images/icon-suvs.svg') no-repeat 4rem 4rem;
+    background-color: hsl(184, 100%, 22%);
+    color: hsl(184, 100%, 22%);
+}
+
+.card-darkcyan {
+    background: url('../images/icon-luxury.svg') no-repeat 4rem 4rem;
+    background-color: hsl(179, 100%, 13%);
+    color: hsl(179, 100%, 13%);
+}
+
+.card h2 {
+    font-family: Big Shoulders Display, sans-serif;
+    font-size: 2.5rem;
+    color: hsl(0, 0%, 95%);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.card p {
+    font-size: 15px;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.5rem;
+    margin-bottom: 6rem;
+}
+
+.card .btn {
+    background-color: hsl(0, 0%, 95%);
+    color: inherit;
+    padding: 0.8rem 1.8rem;
+    border-radius: 2rem;
+}
+
+.card .btn:hover {
+    background-color: inherit;
+    color: hsl(0, 0%, 95%);;
+    border: 2px solid hsl(0, 0%, 95%);
+}
+
+@media(max-width: 1000px) {
+    body {
+        height: 100%;
+        padding: 4rem 1rem;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .cards p {
+        margin-bottom: 4rem;
+    }
+}

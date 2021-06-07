@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+#main-container {
+  font-family: Josefin Sans, sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+#image-wrapper {
+  background: url("images/hero-desktop.jpg") no-repeat left top/cover;
+  flex: 0 0 45%;
+  min-height: 100vh;
+}
+
+#main-wrapper {
+  background: url("images/bg-pattern-desktop.svg") no-repeat left top/cover;
+  min-height: 100vh;
+  flex: 0 0 55%;
+  padding-top: 3rem;
+}
+
+#container {
+  height: 80%;
+  width: 450px;
+  margin: auto;
+}
+
+#wrapper-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#main-wrapper h1 {
+  font-size: 4rem;
+  color: hsl(0, 6%, 24%);
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 15px;
+  margin-bottom: 1rem;
+}
+
+#main-wrapper h1 span {
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+  display: block;
+}
+
+#main-wrapper p {
+  color: hsl(0, 36%, 70%);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+#form {
+  display: flex;
+  position: relative;
+}
+
+#email {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  border: 1px solid hsl(0, 20%, 82%);
+  outline: none;
+  color: hsl(0, 34%, 74%);
+  background: transparent;
+}
+
+#submit {
+  height: 100%;
+  padding: 0 3rem;
+  border-radius: 2rem;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  background: url("images/icon-arrow.svg") no-repeat center center,
+    linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+@media (max-width: 900px) {
+  body {
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    min-height: 100vh;
+  }
+  #main-container {
+    flex-direction: column-reverse;
+    padding-top: 100px;
+  }
+  #logo {
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+  }
+  #image-wrapper {
+    background: url("images/hero-mobile.jpg") no-repeat left top/cover;
+    flex: auto;
+    min-height: 30vh;
+  }
+  #main-wrapper {
+    background: transparent;
+    min-height: auto;
+    flex: auto;
+    padding-top: 2rem;
+  }
+  #main-wrapper h1 {
+    font-size: 2.5rem;
+  }
+  #main-wrapper p {
+    font-size: 0.9rem;
+  }
+  #submit {
+    padding: 0 2rem;
+  }
+  #container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 0 2rem;
+  }
+}

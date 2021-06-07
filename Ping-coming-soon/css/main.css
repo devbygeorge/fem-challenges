@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  font-family: Libre Franklin, sans-serif;
+  font-size: 1.25rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 500px) {
+  body {
+    padding: 1.5rem 0 0 0;
+  }
+}
+
+body header {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body header img {
+  width: 50px;
+}
+
+@media (min-width: 500px) {
+  body main {
+    width: 500px;
+    margin: auto;
+  }
+}
+
+body main h2 {
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #969696;
+  margin-bottom: 1rem;
+}
+
+body main h2 strong {
+  font-weight: 600;
+  color: #000;
+}
+
+body main p {
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+body main form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+@media (min-width: 500px) {
+  body main form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  body main form p {
+    position: absolute;
+    top: 3rem;
+    left: 2rem;
+  }
+}
+
+body main form input {
+  font-size: 0.8rem;
+  line-height: 3.2;
+  border-radius: 2rem;
+  margin-bottom: 0.5rem;
+  outline: none;
+}
+
+body main form #email {
+  color: #4f7df3;
+  border: 1px solid #c2d3ff;
+  padding-left: 2rem;
+}
+
+@media (min-width: 500px) {
+  body main form #email {
+    width: 67%;
+  }
+}
+
+body main form #submit {
+  border: none;
+  background-color: #4f7df3;
+  color: #fff;
+  cursor: pointer;
+  -webkit-box-shadow: 0 5px 10px #c2d3ff;
+          box-shadow: 0 5px 10px #c2d3ff;
+}
+
+body main form #submit:hover {
+  background-color: #7ea0f6;
+}
+
+@media (min-width: 500px) {
+  body main form #submit {
+    width: 30%;
+  }
+}
+
+body main img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+body footer {
+  font-size: 0.7rem;
+  color: #969696;
+}
+
+@media (min-width: 500px) {
+  body footer {
+    font-size: 0.6rem;
+  }
+}
+
+body footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+body footer ul li {
+  margin-right: 1rem;
+}
+
+body footer ul li:last-child {
+  margin-right: 0;
+}
+
+body footer ul li a {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.9rem;
+  color: #4f7df3;
+  border: 1px solid #c2d3ff;
+  border-radius: 50%;
+}
+
+@media (min-width: 500px) {
+  body footer ul li a {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.7rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

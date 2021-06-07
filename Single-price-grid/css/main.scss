@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+$colors: (
+  primary-cyan: hsl(179, 62%, 43%),
+  primary-yellow: hsl(71, 73%, 54%),
+  neutral-gray: hsl(204, 43%, 93%),
+  neutral-blue: hsl(218, 22%, 67%),
+);
+
+$borders: 0.3rem;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$desktop: 680px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+body {
+  font-family: Karla, sans-serif;
+  background: color(neutral-gray);
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  #cards-container {
+    max-width: 310px;
+    border-radius: $borders;
+    overflow: hidden;
+
+    @include desktop {
+      max-width: 600px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "com com" "subs why";
+    }
+
+    .card-item {
+      padding: 1.5rem;
+      @include desktop {
+        padding: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+        color: #fff;
+
+        @include desktop {
+          font-size: 1.4rem;
+        }
+      }
+
+      h3 {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        color: #fff;
+
+        @include desktop {
+          font-size: 1.1rem;
+        }
+      }
+
+      p {
+        line-height: 1.7;
+        font-size: 0.85rem;
+        color: #fff;
+
+        @include desktop {
+          font-size: 0.9rem;
+        }
+      }
+
+      .price {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 0.5rem;
+
+        span {
+          font-size: 0.9rem;
+          color: lighten(color(primary-cyan), 30);
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+
+      a {
+        display: block;
+        background: color(primary-yellow);
+        line-height: 2.7;
+        text-align: center;
+        border-radius: 0.3rem;
+        color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+        &:hover {
+          background: darken(color(primary-yellow), 10);
+        }
+      }
+    }
+
+    .community {
+      background: #fff;
+      h2 {
+        color: color(primary-cyan);
+      }
+      h3 {
+        color: color(primary-yellow);
+      }
+      p {
+        color: color(neutral-blue);
+      }
+      @include desktop {
+        grid-area: com;
+      }
+    }
+    .subscription {
+      background: color(primary-cyan);
+      h3 {
+        margin-bottom: 1.8rem;
+      }
+      @include desktop {
+        grid-area: subs;
+        h2 {
+          font-size: 1rem;
+        }
+        h3 {
+          font-size: 0.85rem;
+        }
+      }
+    }
+    .whyus {
+      background: lighten(color(primary-cyan), 10);
+      padding-right: 6rem;
+      @include desktop {
+        grid-area: why;
+        h2 {
+          font-size: 1rem;
+        }
+        p {
+          line-height: 1.4;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

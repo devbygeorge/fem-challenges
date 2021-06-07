@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: Karla, sans-serif;
+  background: #e5eff5;
+  padding: 4rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+body #cards-container {
+  max-width: 310px;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+@media (min-width: 680px) {
+  body #cards-container {
+    max-width: 600px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "com com" "subs why";
+  }
+}
+
+body #cards-container .card-item {
+  padding: 1.5rem;
+}
+
+@media (min-width: 680px) {
+  body #cards-container .card-item {
+    padding: 2.5rem;
+  }
+}
+
+body #cards-container .card-item h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  color: #fff;
+}
+
+@media (min-width: 680px) {
+  body #cards-container .card-item h2 {
+    font-size: 1.4rem;
+  }
+}
+
+body #cards-container .card-item h3 {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+@media (min-width: 680px) {
+  body #cards-container .card-item h3 {
+    font-size: 1.1rem;
+  }
+}
+
+body #cards-container .card-item p {
+  line-height: 1.7;
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+@media (min-width: 680px) {
+  body #cards-container .card-item p {
+    font-size: 0.9rem;
+  }
+}
+
+body #cards-container .card-item .price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+body #cards-container .card-item .price span {
+  font-size: 0.9rem;
+  color: #8fe5e3;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body #cards-container .card-item a {
+  display: block;
+  background: #c0df34;
+  line-height: 2.7;
+  text-align: center;
+  border-radius: 0.3rem;
+  color: #fff;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+body #cards-container .card-item a:hover {
+  background: #a4c21e;
+}
+
+body #cards-container .community {
+  background: #fff;
+}
+
+body #cards-container .community h2 {
+  color: #2ab2af;
+}
+
+body #cards-container .community h3 {
+  color: #c0df34;
+}
+
+body #cards-container .community p {
+  color: #98a6bd;
+}
+
+@media (min-width: 680px) {
+  body #cards-container .community {
+    grid-area: com;
+  }
+}
+
+body #cards-container .subscription {
+  background: #2ab2af;
+}
+
+body #cards-container .subscription h3 {
+  margin-bottom: 1.8rem;
+}
+
+@media (min-width: 680px) {
+  body #cards-container .subscription {
+    grid-area: subs;
+  }
+  body #cards-container .subscription h2 {
+    font-size: 1rem;
+  }
+  body #cards-container .subscription h3 {
+    font-size: 0.85rem;
+  }
+}
+
+body #cards-container .whyus {
+  background: #3dd1cf;
+  padding-right: 6rem;
+}
+
+@media (min-width: 680px) {
+  body #cards-container .whyus {
+    grid-area: why;
+  }
+  body #cards-container .whyus h2 {
+    font-size: 1rem;
+  }
+  body #cards-container .whyus p {
+    line-height: 1.4;
+    font-size: 0.8rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

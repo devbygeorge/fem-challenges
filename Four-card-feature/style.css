@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  background-color: hsl(0, 0%, 98%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-weight: 200;
+  color: hsl(234, 12%, 34%);
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h1 span {
+  font-weight: 600;
+  display: block;
+}
+
+p {
+  width: 500px;
+  font-size: 15px;
+  color: hsl(229, 6%, 66%);
+  text-align: center;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+#wrapper {
+  display: grid;
+  grid-template-areas:
+    "cyanss redss bluess"
+    "cyanss orangess bluess";
+  justify-content: center;
+  align-items: center;
+  grid-gap: 2rem;
+}
+
+.card {
+  width: 320px;
+  height: 220px;
+  padding: 1.2rem 1rem;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px hsl(229, 6%, 66%);
+}
+
+.card-cyan {
+  border-top: 4px solid hsl(180, 62%, 55%);
+  background: url("images/icon-supervisor.svg") no-repeat right 1.5rem bottom
+    1.5rem;
+  grid-area: cyanss;
+}
+.card-red {
+  border-top: 4px solid hsl(0, 78%, 62%);
+  background: url("images/icon-team-builder.svg") no-repeat right 1.5rem bottom
+    1.5rem;
+  grid-area: redss;
+}
+.card-orange {
+  border-top: 4px solid hsl(34, 97%, 64%);
+  background: url("images/icon-karma.svg") no-repeat right 1.5rem bottom 1.5rem;
+  grid-area: orangess;
+}
+.card-blue {
+  border-top: 4px solid hsl(212, 86%, 64%);
+  background: url("images/icon-calculator.svg") no-repeat right 1.5rem bottom
+    1.5rem;
+  grid-area: bluess;
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 0.4rem;
+}
+
+.card p {
+  width: 100%;
+  font-size: 0.7rem;
+  color: hsl(229, 6%, 66%);
+  text-align: left;
+}
+
+@media (max-width: 1030px) {
+  #main-container {
+    width: 390px;
+    padding: 1.5rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  p {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  #wrapper {
+    display: block;
+  }
+  .card {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+}

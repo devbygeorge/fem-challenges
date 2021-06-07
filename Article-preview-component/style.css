@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-size: 13px;
+  font-family: Manrope, sans-serif;
+  background-color: hsl(210, 46%, 95%);
+  color: hsl(217, 19%, 35%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+#main-container {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  display: flex;
+  max-width: 750px;
+  box-shadow: 10px 10px 25px hsl(212, 19%, 87%);
+}
+
+#image {
+  flex: 1 0 40%;
+  background: url("images/drawers.jpg") no-repeat left top/cover;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+#text-wrapper {
+  padding: 2rem 2.5rem;
+  position: relative;
+}
+
+#text-wrapper h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+#text-wrapper p {
+  font-weight: 500;
+  line-height: 1.7;
+  color: hsl(214, 17%, 51%);
+  margin-bottom: 1.5rem;
+}
+
+#user-info {
+  display: grid;
+  grid-template-areas: "profile name . . . . . share" "profile time . . . . . share";
+  align-items: center;
+}
+
+#profile-img {
+  width: 40px;
+  border-radius: 50%;
+  grid-area: profile;
+}
+
+#user-info h3 {
+  font-size: inherit;
+  grid-area: name;
+}
+
+#user-info span {
+  color: hsl(214, 17%, 51%);
+  grid-area: time;
+}
+
+#share {
+  width: 2rem;
+  height: 2rem;
+  background: hsl(210, 46%, 95%);
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  grid-area: share;
+  justify-self: flex-end;
+}
+
+#share:hover,
+#socials li:hover {
+  transform: scale(1.1);
+}
+
+#socials {
+  display: none;
+  align-items: center;
+  position: absolute;
+  right: -61px;
+  bottom: 100px;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  background-color: hsl(217, 19%, 35%);
+  box-shadow: 10px 10px 25px hsl(212, 19%, 87%);
+}
+
+#socials::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid hsl(217, 19%, 35%);
+  position: absolute;
+  bottom: -15px;
+  right: 97px;
+}
+
+#socials li {
+  margin-right: 1rem;
+}
+
+#socials li:last-child {
+  margin: 0;
+}
+
+#socials li a {
+  color: hsl(212, 23%, 69%);
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+@media (max-width: 875px) {
+  #main-container {
+    max-width: 375px;
+    flex-direction: column;
+  }
+  #image {
+    flex: auto;
+    height: 220px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.5rem;
+    background-position: center top;
+  }
+
+  #text-wrapper h2 {
+    font-size: 1rem;
+    margin-top: 0.3rem;
+  }
+
+  #text-wrapper p {
+    font-size: 0.8rem;
+  }
+
+  #text-wrapper {
+    padding-bottom: 1.4rem;
+  }
+
+  #socials {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: 70px;
+  }
+
+  #share {
+    z-index: 100;
+    align-self: flex-end;
+  }
+
+  #socials::after {
+    display: none;
+  }
+}

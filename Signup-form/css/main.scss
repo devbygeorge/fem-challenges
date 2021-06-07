@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+$colors: (
+  primary-red: hsl(0, 100%, 74%),
+  primary-green: hsl(154, 59%, 51%),
+  accent: hsl(248, 32%, 49%),
+  neutral-dark: hsl(249, 10%, 26%),
+  neutral-gray: hsl(246, 25%, 77%),
+);
+
+$weights: (
+  regular: 400,
+  medium: 500,
+  semi-bold: 600,
+  bold: 700,
+);
+
+$borders: 0.5rem;
+$paddings: 1.5rem;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@function weight($weight-name) {
+  @return map-get($weights, $weight-name);
+}
+
+$desktop: 840px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  font-size: 1rem;
+  background: color(primary-red);
+  padding: 0 $paddings;
+
+  @include desktop {
+    background: url("../images/bg-intro-desktop.png"), color(primary-red);
+  }
+
+  main {
+    background: url("../images/bg-intro-mobile.png") no-repeat center top/cover;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 0;
+
+    @include desktop {
+      min-height: 100vh;
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+    }
+  }
+  #main__text {
+    @include desktop {
+      width: 500px;
+      text-align: left;
+      margin: 5rem 5rem 0 0;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      line-height: 2.4rem;
+      margin-bottom: 1rem;
+
+      @include desktop {
+        font-size: 3rem;
+        line-height: 3.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  #main__form {
+    #offer {
+      background: color(accent);
+      border-radius: $borders;
+      margin-bottom: 1.5rem;
+      padding: $paddings $paddings * 3;
+      box-shadow: 0 0.5rem rgba(0, 0, 0, 0.1);
+      span {
+        font-weight: weight(semi-bold);
+      }
+    }
+    #form {
+      background: #fff;
+      border-radius: $borders;
+      padding: $paddings;
+      text-align: left;
+      box-shadow: 0 0.5rem rgba(0, 0, 0, 0.1);
+
+      @include desktop {
+        padding: $paddings * 1.5;
+      }
+
+      input {
+        display: block;
+        width: 100%;
+        line-height: 2.5rem;
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+        font-weight: weight(semi-bold);
+        color: color(neutral-dark);
+        border: 1px solid color(neutral-gray);
+        border-radius: $borders / 2;
+        outline: none;
+
+        @include desktop {
+          line-height: 3.3rem;
+        }
+      }
+
+      input[type="submit"] {
+        background: color(primary-green);
+        border: none;
+        color: #fff;
+        padding-left: 0;
+        text-transform: uppercase;
+        font-weight: weight(medium);
+        cursor: pointer;
+        box-shadow: inset 0 -0.2rem rgba(0, 0, 0, 0.1);
+      }
+
+      .input-error {
+        border: 1px solid color(primary-red);
+        background: url("../images/icon-error.svg") no-repeat right 1rem center;
+        margin-bottom: 0.3rem;
+      }
+
+      p {
+        color: color(primary-red);
+        font-size: 0.7rem;
+        font-style: italic;
+        text-align: right;
+        margin-bottom: 1rem;
+        font-weight: weight(semi-bold);
+      }
+
+      p:last-child {
+        font-size: 0.7rem;
+        color: color(neutral-gray);
+        text-align: center;
+        padding: 0 1.5rem;
+
+        a {
+          color: color(primary-red);
+          font-weight: weight(bold);
+        }
+      }
+    }
+  }
+}
