@@ -14,3 +14,4 @@
 | #11 | [Ping coming soon](https://github.com/GiorgiPasieshvili/Frontend-Mentor-Challenges/tree/main/Ping-coming-soon) | [Live Demo](https://giorgipasieshvili.github.io/Frontend-Mentor-Challenges/Ping-coming-soon/)  |
 | #12 | [Huddle landing page](https://github.com/GiorgiPasieshvili/Frontend-Mentor-Challenges/tree/main/Huddle-landing-page) | [Live Demo](https://giorgipasieshvili.github.io/Frontend-Mentor-Challenges/Huddle-landing-page/)  |
 | #13 | [Blogr landing page](https://github.com/GiorgiPasieshvili/Frontend-Mentor-Challenges/tree/main/Blogr-landing-page) | [Live Demo](https://giorgipasieshvili.github.io/Frontend-Mentor-Challenges/Blogr-landing-page/)  |
+| #14 | [Sunnyside landing page](https://github.com/GiorgiPasieshvili/Frontend-Mentor-Challenges/tree/main/Sunnyside-landing-page) | [Live Demo](https://giorgipasieshvili.github.io/Frontend-Mentor-Challenges/Sunnyside-landing-page/)  |
