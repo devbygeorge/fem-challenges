@@ -1,0 +1,693 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+
+$colors: (
+  moderate-cyan: hsl(176, 50%, 47%),
+  dark-cyan: hsl(176, 72%, 28%),
+  black: hsl(0, 0%, 0%),
+  dark-gray: hsl(0, 0%, 48%),
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$desktopView: 640px;
+
+@mixin desktopView {
+  @media (min-width: $desktopView) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Commissioner, sans-serif;
+  font-size: 16px;
+  background: rgb(250, 250, 250);
+  position: relative;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.black-bg {
+  display: none;
+  background: rgba(0, 0, 0, 0.288);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+}
+
+.active {
+  display: flex !important;
+  @include desktopView {
+    display: none !important;
+  }
+}
+
+.modal-active {
+  display: block !important;
+  z-index: 15;
+}
+
+.menu-btn {
+  width: 15px;
+  height: 15px;
+  background: url("../images/icon-hamburger.svg");
+  cursor: pointer;
+  z-index: 10;
+
+  @include desktopView {
+    display: none;
+  }
+}
+
+.icon-active {
+  background: url("../images/icon-close-menu.svg");
+
+  @include desktopView {
+    display: none;
+  }
+}
+
+#main-header {
+  height: 40vh;
+  background: url("../images/image-hero-mobile.jpg") no-repeat center top/cover;
+  padding: 28px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      border-radius: 8px;
+      overflow: hidden;
+
+      @include desktopView {
+        z-index: 0;
+      }
+
+      a {
+        font-size: 17px;
+        font-weight: 500;
+        background: #fff;
+        color: #000;
+        text-decoration: none;
+        padding: 25px;
+        &:hover {
+          color: #999;
+        }
+      }
+    }
+
+    @include desktopView {
+      .nav {
+        display: flex !important;
+        flex-direction: row;
+        position: relative;
+        top: auto;
+        left: auto;
+        right: 0;
+        width: auto;
+        a {
+          font-size: 14px;
+          background: transparent;
+          color: rgb(255, 255, 255);
+          margin-right: 22px;
+          padding: 0;
+          &:hover {
+            border-bottom: 1px solid rgba(156, 156, 156, 0.315);
+            line-height: 0.8;
+          }
+        }
+      }
+    }
+  }
+
+  @include desktopView {
+    height: 55vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0) 100%),
+      url("../images/image-hero-desktop.jpg") no-repeat center bottom/cover;
+
+    .container {
+      max-width: 1200px;
+      padding-top: 48px;
+    }
+  }
+}
+
+#main {
+  margin-top: -80px;
+  padding: 28px;
+
+  @include desktopView {
+    margin-top: -120px;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  section {
+    border: 1px solid #eee;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 32px;
+    p,
+    span {
+      font-size: 14px;
+      color: color(dark-gray);
+      line-height: 1.8;
+    }
+    .btn {
+      font-size: inherit;
+      display: block;
+      font-weight: 500;
+      background: color(moderate-cyan);
+      color: #fff;
+      border-radius: 32px;
+      padding: 16px 32px;
+      text-decoration: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      &:hover {
+        background: color(dark-cyan);
+      }
+    }
+
+    .btn-bookmark {
+      background: #eee;
+      border-radius: 32px;
+      padding: 0 58px 0 0;
+      text-decoration: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      display: grid;
+      grid-template-columns: auto 2fr;
+      align-items: center;
+      width: 100%;
+
+      &:hover::after {
+        content: "";
+        width: 56px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: rgba(204, 204, 204, 0.322);
+        border-radius: 50%;
+      }
+
+      #bookmark-text {
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        font-weight: 700;
+        color: color(dark-gray);
+      }
+    }
+
+    .bookmarked {
+      #bookmark-text {
+        color: color(dark-cyan);
+      }
+      circle {
+        fill: color(dark-cyan);
+      }
+      path {
+        fill: #fff;
+      }
+    }
+
+    @include desktopView {
+      padding: 48px;
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .item-disabled {
+    position: relative;
+    cursor: auto !important;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+    .btn {
+      background: #ccc;
+    }
+    h3,
+    .item-quantity span {
+      color: color(dark-gray) !important;
+    }
+  }
+
+  .intro {
+    text-align: center;
+    position: relative;
+    .logo-master {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    h1 {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 24px 0 16px;
+    }
+    p {
+      margin-bottom: 16px;
+    }
+    .btn {
+      margin-bottom: 16px;
+      width: 100%;
+
+      @include desktopView {
+        width: auto;
+      }
+    }
+
+    @include desktopView {
+      .intro-btns {
+        display: flex;
+        justify-content: space-between;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      p {
+        margin-bottom: 28px;
+      }
+      .btn {
+        margin: 0;
+      }
+      .btn-bookmark {
+        padding: 0 28px 0 0;
+        width: auto;
+        svg {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+
+  .modal {
+    display: none;
+    position: absolute;
+    top: -20vh;
+    left: 0;
+    z-index: 15;
+
+    h2 {
+      font-size: 19px;
+      margin-bottom: 16px;
+    }
+    p {
+      margin-bottom: 24px;
+    }
+
+    @include desktopView {
+      h2 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+
+    .modal-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .modal-item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+          "radio heading"
+          "radio proposal"
+          "paragraph paragraph"
+          "quantity quantity"
+          "enterplg enterplg";
+        align-items: center;
+        cursor: pointer;
+        padding: 24px;
+        position: relative;
+
+        @include desktopView {
+          grid-template-columns: auto auto 1fr auto;
+          grid-template-areas:
+            "radio heading proposal quantity"
+            "radio paragraph paragraph paragraph"
+            "enterplg enterplg enterplg enterplg";
+        }
+
+        .custom-radio {
+          position: relative;
+          margin: 6px 48px 0 0;
+          grid-area: radio;
+          align-self: flex-start;
+
+          .modal-radio {
+            position: absolute;
+            opacity: 0;
+            &:checked ~ .checkmark::after {
+              content: "";
+              position: absolute;
+              top: 5.5px;
+              left: 6px;
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              background-color: color(moderate-cyan);
+            }
+          }
+          .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25px;
+            height: 25px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            &:hover {
+              background-color: #f1f1f1;
+            }
+          }
+        }
+
+        h3 {
+          font-size: 16px;
+          margin-right: 16px;
+          grid-area: heading;
+        }
+        .proposal {
+          font-weight: 700;
+          color: color(moderate-cyan);
+          grid-area: proposal;
+          justify-self: flex-start;
+          line-height: 1;
+        }
+        .item-quantity {
+          font-size: 16px;
+          color: color(dark-gray);
+          display: flex;
+          align-items: center;
+          grid-area: quantity;
+          line-height: 1;
+
+          span {
+            font-size: 20px;
+            font-weight: 700;
+            color: #000;
+            margin: 0 8px 0 0;
+          }
+        }
+        p {
+          margin-top: 10px;
+          grid-area: paragraph;
+        }
+
+        .modal-item-pledge {
+          margin-top: 30px;
+          grid-area: enterplg;
+          display: none;
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+          grid-gap: 16px;
+
+          span {
+            grid-column: 1/3;
+            justify-self: center;
+          }
+
+          .price-label {
+            position: relative;
+
+            .price-input {
+              width: 100%;
+              height: 45px;
+              border: 1px solid color(dark-gray);
+              border-radius: 32px;
+              padding: 0 36px 0 48px;
+              font-weight: bold;
+              outline: none;
+              &:focus {
+                border: 1px solid color(dark-cyan);
+              }
+            }
+
+            .price-valute {
+              font-size: 14px;
+              position: absolute;
+              left: 35px;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+          }
+
+          .btn {
+            padding: 13px 0;
+          }
+
+          &::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: #eee;
+            position: absolute;
+            bottom: 130px;
+            left: 0;
+          }
+
+          @include desktopView {
+            grid-template-columns: 1fr auto auto;
+
+            span {
+              grid-column: auto;
+              justify-self: flex-start;
+            }
+            .price-label .price-input {
+              width: 115px;
+            }
+
+            .btn {
+              padding: 13px 28px;
+            }
+
+            &::before {
+              bottom: 95px;
+            }
+          }
+        }
+
+        &-active {
+          border: 2px solid color(moderate-cyan);
+          .modal-item-pledge {
+            display: grid;
+          }
+        }
+      }
+    }
+  }
+
+  .success {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 70px;
+    transform: translateX(-50%);
+    z-index: 15;
+
+    width: 100%;
+    text-align: center;
+
+    @include desktopView {
+      top: 170px;
+      width: 70%;
+    }
+
+    img {
+      width: 90px;
+      margin-bottom: 32px;
+    }
+
+    h4 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    p {
+      margin-bottom: 24px;
+    }
+    .btn {
+      margin: auto;
+    }
+  }
+
+  .stats {
+    text-align: center;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style-type: none;
+      li {
+        color: color(dark-gray);
+        font-size: 14px;
+        margin: 0 0 16px 0;
+        padding: 0 0 20px 0;
+        position: relative;
+        span {
+          display: block;
+          font-size: 32px;
+          font-weight: 700;
+          color: #000;
+        }
+        &::after {
+          content: "";
+          background: #ccc;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 100px;
+          height: 1px;
+          transform: translate(-50%);
+        }
+        &:last-child {
+          padding-bottom: 12px;
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      @include desktopView {
+        flex-direction: row;
+        margin-bottom: 20px;
+
+        li {
+          width: 30%;
+          margin: 0;
+          padding: 0 50px 0 0;
+          &::after {
+            left: auto;
+            bottom: 14px;
+            right: 0;
+            width: 1px;
+            height: 60px;
+          }
+        }
+      }
+    }
+    .progress {
+      background: #eee;
+      border-radius: 8px;
+      height: 12px;
+      overflow: hidden;
+      position: relative;
+      &::after {
+        content: "";
+        width: 80%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: color(moderate-cyan);
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .about {
+    h2 {
+      font-size: 19px;
+      margin-bottom: 24px;
+    }
+    p {
+      margin-bottom: 24px;
+    }
+
+    @include desktopView {
+      h2 {
+        font-size: 20px;
+      }
+    }
+
+    .about-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .about-item {
+        h3 {
+          font-size: 14px;
+          margin-bottom: 6px;
+        }
+        .proposal {
+          display: inline-block;
+          color: color(moderate-cyan);
+          margin-bottom: 16px;
+        }
+        .item-quantity {
+          display: block;
+          font-size: 16px;
+          color: color(dark-gray);
+          display: flex;
+          align-items: center;
+          span {
+            font-size: 28px;
+            font-weight: 700;
+            color: #000;
+            margin: 0 8px 0 0;
+          }
+        }
+
+        @include desktopView {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+          h3 {
+            font-size: 17px;
+          }
+          p {
+            font-size: 15px;
+            grid-column: 1/3;
+          }
+          .btn {
+            justify-self: flex-end;
+          }
+          .proposal {
+            justify-self: flex-end;
+          }
+        }
+      }
+    }
+  }
+}
