@@ -117,7 +117,7 @@ body {
 }
 
 #main-header .container .nav a:hover {
-  color: #999;
+  color: #eee;
 }
 
 @media (min-width: 640px) {
@@ -392,7 +392,11 @@ body {
   display: grid;
   -ms-grid-columns: auto 1fr;
       grid-template-columns: auto 1fr;
-      grid-template-areas: "radio heading" "radio proposal" "paragraph paragraph" "quantity quantity" "enterplg enterplg";
+      grid-template-areas: "radio heading"
+ "radio proposal"
+ "paragraph paragraph"
+ "quantity quantity"
+ "enterplg enterplg";
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -405,7 +409,9 @@ body {
   #main .modal .modal-wrapper .modal-item {
     -ms-grid-columns: auto auto 1fr auto;
         grid-template-columns: auto auto 1fr auto;
-        grid-template-areas: "radio heading proposal quantity" "radio paragraph paragraph paragraph" "enterplg enterplg enterplg enterplg";
+        grid-template-areas: "radio heading proposal quantity"
+ "radio paragraph paragraph paragraph"
+ "enterplg enterplg enterplg enterplg";
   }
 }
 
