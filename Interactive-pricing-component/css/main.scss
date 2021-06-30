@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+$colors: (
+  soft-cyan: hsl(174, 77%, 80%),
+  strong-cyan: hsl(174, 86%, 45%),
+  light-grayish-red: hsl(14, 92%, 95%),
+  light-red: hsl(15, 100%, 70%),
+  pale-blue: hsl(226, 100%, 87%),
+  very-pale-blue: hsl(230, 100%, 99%),
+  light-grayish-blue: hsl(224, 65%, 95%),
+  grayish-blue: hsl(225, 20%, 60%),
+  dark-desaturatedblue: hsl(227, 35%, 25%),
+);
+
+@function getColor($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$desktopView: 580px;
+
+@mixin desktopView {
+  @media (min-width: $desktopView) {
+    @content;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: Manrope, sans-serif;
+  background: url("../images/bg-pattern.svg") no-repeat 0 -300px / cover;
+  padding: 0 1.5em;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+header {
+  background: url("../images/pattern-circles.svg") no-repeat top center;
+  padding: 2.5em 0;
+  margin: 4em 0 2em;
+  h1 {
+    font-size: 1.3em;
+    font-weight: 800;
+    color: getColor(dark-desaturatedblue);
+    margin-bottom: 1em;
+
+    @include desktopView {
+      font-size: 1.7em;
+      margin-bottom: 0.5em;
+    }
+  }
+  p {
+    font-size: 0.9em;
+    line-height: 1.7em;
+    color: getColor(grayish-blue);
+  }
+}
+
+main {
+  font-size: 0.8em;
+  background: #fff;
+  color: getColor(grayish-blue);
+  box-shadow: 0px 10px 30px 5px getColor(light-grayish-blue);
+  border-radius: 0.5em;
+
+  .pricing-component {
+    padding: 2.5em 1em 3em;
+    border-bottom: 1px solid getColor(light-grayish-blue);
+    .propose {
+      display: inline-block;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 3.5em;
+    }
+
+    .slidecontainer {
+      height: 0.7em;
+      margin-bottom: 3.5em;
+      position: relative;
+
+      .progress {
+        display: inline-block;
+        width: 45%;
+        height: 100%;
+        border-radius: 1em;
+        background: getColor(soft-cyan);
+        position: absolute;
+        top: 0.1em;
+      }
+
+      #slider {
+        -webkit-appearance: none;
+        appearance: none;
+
+        width: 100%;
+        height: 0.8em;
+        background: getColor(light-grayish-blue);
+        border-radius: 1em;
+        outline: none;
+
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 10%;
+          height: 38px;
+          background: url("../images/icon-slider.svg") no-repeat center,
+            getColor(strong-cyan);
+          box-shadow: 5px 10px 20px 5px getColor(soft-cyan);
+          border-radius: 50%;
+          border: none;
+          cursor: pointer;
+          @include desktopView {
+            height: 48px;
+          }
+        }
+        &::-moz-range-thumb {
+          width: 10%;
+          height: 38px;
+          background: url("../images/icon-slider.svg") no-repeat center,
+            getColor(strong-cyan);
+          box-shadow: 5px 10px 20px 5px getColor(soft-cyan);
+          border-radius: 50%;
+          border: 0;
+          cursor: pointer;
+          @include desktopView {
+            height: 48px;
+          }
+        }
+      }
+    }
+
+    .price {
+      font-size: 1.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 3em;
+      #price-value {
+        font-size: 2.3em;
+        font-weight: 800;
+        color: getColor(dark-desaturatedblue);
+        margin-right: 0.2em;
+      }
+    }
+
+    .switch {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+
+      .btn-switch {
+        width: 3.6em;
+        height: 1.8em;
+        background: getColor(light-grayish-blue);
+        border-radius: 2em;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        transition: all 300ms ease-in-out;
+
+        &::before {
+          content: "";
+          width: 1.4em;
+          height: 1.4em;
+          background: #fff;
+          position: absolute;
+          left: 0.25em;
+          top: 0.2em;
+          border-radius: 50%;
+          border: 1px solid getColor(pale-blue);
+          transition: all 300ms ease-in-out;
+        }
+      }
+
+      .switched {
+        background: getColor(soft-cyan);
+        &::before {
+          left: 2em;
+        }
+      }
+    }
+
+    @include desktopView {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 3.5em 4em;
+
+      .propose {
+        order: 1;
+      }
+
+      .price {
+        order: 2;
+      }
+
+      .slidecontainer {
+        grid-column: 1/3;
+        order: 3;
+      }
+
+      .switch {
+        grid-column: 1/3;
+        order: 4;
+      }
+    }
+  }
+  .additional-info {
+    padding: 2em 0 2.5em;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+
+      margin-bottom: 2.5em;
+      list-style-image: url("../images/icon-check.svg");
+    }
+    a {
+      display: inline-block;
+      background: getColor(dark-desaturatedblue);
+      color: getColor(pale-blue);
+      padding: 1.1em 3.5em;
+      border-radius: 2em;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    @include desktopView {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3em 5em;
+
+      ul {
+        margin-bottom: 0;
+        text-align: left;
+      }
+    }
+  }
+}
