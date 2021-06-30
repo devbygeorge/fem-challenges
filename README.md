@@ -16,5 +16,4 @@
 | #13 | [Blogr landing page](https://github.com/GiorgiPasieshvili/Frontend-Mentor-Challenges/tree/main/Blogr-landing-page) | [Live Demo](https://giorgipasieshvili.github.io/Frontend-Mentor-Challenges/Blogr-landing-page/)  |
 | #14 | [Sunnyside landing page](https://github.com/GiorgiPasieshvili/Frontend-Mentor-Challenges/tree/main/Sunnyside-landing-page) | [Live Demo](https://giorgipasieshvili.github.io/Frontend-Mentor-Challenges/Sunnyside-landing-page/)  |
 | #15 | [Crowdfunding product page](https://github.com/GiorgiPasieshvili/Frontend-Mentor-Challenges/tree/main/Crowdfunding-product-page) | [Live Demo](https://giorgipasieshvili.github.io/Frontend-Mentor-Challenges/Crowdfunding-product-page/)  |
-
-
+| #16 | [Interactive pricing component](https://github.com/GiorgiPasieshvili/Frontend-Mentor-Challenges/tree/main/Interactive-pricing-component) | [Live Demo](https://giorgipasieshvili.github.io/Frontend-Mentor-Challenges/Interactive-pricing-component/)  |
