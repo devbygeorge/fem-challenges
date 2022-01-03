@@ -1,0 +1,13 @@
+.ThemeSelector {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+@media(max-width: 480px) {
+  .ThemeSelector {
+    font-size: .9rem;
+  }
+}

@@ -1,0 +1,24 @@
+
+.Header {
+  box-shadow: 0 3px 5px rgb(235, 233, 233);
+  margin-bottom: 2.5rem;
+  background: #fff;
+  padding: 1.2rem 0;
+}
+
+.Header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+@media(max-width: 480px) {
+  .Header h1 {
+    font-size: 1rem;
+  }
+}
