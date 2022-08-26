@@ -17,4 +17,4 @@
 | 14 | [sunnyside landing page](https://github.com/GiorgiPasieshvili/frontendmentor-challenges/tree/main/sunnyside-landing-page) | [Link](https://giorgipasieshvili.github.io/frontendmentor-challenges/sunnyside-landing-page/)  |
 | 15 | [crowdfunding product page](https://github.com/GiorgiPasieshvili/frontendmentor-challenges/tree/main/crowdfunding-product-page) | [Link](https://giorgipasieshvili.github.io/frontendmentor-challenges/crowdfunding-product-page/)  |
 | 16 | [interactive pricing component](https://github.com/GiorgiPasieshvili/frontendmentor-challenges/tree/main/interactive-pricing-component) | [Link](https://giorgipasieshvili.github.io/frontendmentor-challenges/interactive-pricing-component/)  |
-| 17 | [rest countries api](https://github.com/GiorgiPasieshvili/frontendmentor-challenges/tree/main/rest-countries-api) | [Link]()  |
+| 17 | [rest countries api](https://github.com/GiorgiPasieshvili/frontendmentor-challenges/tree/main/rest-countries-api) | [Link](https://rest-countries-api-ashy.vercel.app/)  |
