@@ -10,11 +10,14 @@
   list-style: none;
 }
 
+img {
+  object-fit: cover;
+}
+
 body {
-  font-size: 13px;
-  font-family: Manrope, sans-serif;
-  background-color: hsl(210, 46%, 95%);
+  font: 13px Manrope, sans-serif;
   color: hsl(217, 19%, 35%);
+  background: hsl(210, 46%, 95%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,90 +25,92 @@ body {
   padding: 1rem;
 }
 
-#main-container {
-  background-color: #fff;
-  border-radius: 0.5rem;
+.preview {
   display: flex;
-  max-width: 750px;
+  width: 750px;
+  border-radius: 8px;
+
+  background: white;
   box-shadow: 10px 10px 25px hsl(212, 19%, 87%);
 }
 
-#image {
-  flex: 1 0 40%;
-  background: url("images/drawers.jpg") no-repeat left top/cover;
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
+.preview__image {
+  width: 40%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
-#text-wrapper {
-  padding: 2rem 2.5rem;
+.preview__wrapper {
+  padding: 32px 46px;
   position: relative;
 }
 
-#text-wrapper h2 {
+.preview__wrapper h2 {
   font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 0.8rem;
+  margin-bottom: 14px;
 }
 
-#text-wrapper p {
+.preview__wrapper p {
   font-weight: 500;
   line-height: 1.7;
+  margin-bottom: 24px;
   color: hsl(214, 17%, 51%);
-  margin-bottom: 1.5rem;
 }
 
-#user-info {
-  display: grid;
-  grid-template-areas: "profile name . . . . . share" "profile time . . . . . share";
+.preview__user {
+  display: flex;
+  gap: 20px;
   align-items: center;
 }
 
-#profile-img {
+.preview__picture {
   width: 40px;
   border-radius: 50%;
-  grid-area: profile;
 }
 
-#user-info h3 {
+.preview__flex-grow {
+  flex: 1;
+}
+
+.preview__username {
   font-size: inherit;
-  grid-area: name;
 }
 
-#user-info span {
+.preview__date {
   color: hsl(214, 17%, 51%);
-  grid-area: time;
 }
 
-#share {
-  width: 2rem;
-  height: 2rem;
+.preview__share {
+  width: 30px;
+  height: 30px;
   background: hsl(210, 46%, 95%);
+  padding: 8px;
   border-radius: 50%;
-  padding: 0.5rem;
   cursor: pointer;
-  grid-area: share;
-  justify-self: flex-end;
 }
 
-#share:hover,
-#socials li:hover {
+.preview__share:hover,
+.preview__socials li:hover {
   transform: scale(1.1);
 }
 
-#socials {
+.preview__socials {
   display: none;
   align-items: center;
+  gap: 16px;
+
   position: absolute;
-  right: -61px;
+  right: -55px;
   bottom: 100px;
-  padding: 1rem 2rem;
-  border-radius: 0.8rem;
-  background-color: hsl(217, 19%, 35%);
+  padding: 16px 32px;
+  border-radius: 14px;
+
+  background: hsl(217, 19%, 35%);
   box-shadow: 10px 10px 25px hsl(212, 19%, 87%);
 }
 
-#socials::after {
+.preview__socials::after {
   content: "";
   width: 0;
   height: 0;
@@ -117,47 +122,37 @@ body {
   right: 97px;
 }
 
-#socials li {
-  margin-right: 1rem;
-}
-
-#socials li:last-child {
-  margin: 0;
-}
-
-#socials li a {
+.preview__socials a {
   color: hsl(212, 23%, 69%);
   text-transform: uppercase;
   letter-spacing: 0.3rem;
 }
 
 @media (max-width: 875px) {
-  #main-container {
-    max-width: 375px;
+  .preview {
+    width: 375px;
     flex-direction: column;
   }
-  #image {
-    flex: auto;
+  .preview__image {
+    width: auto;
     height: 220px;
     border-bottom-left-radius: 0;
-    border-top-right-radius: 0.5rem;
-    background-position: center top;
+    border-top-right-radius: 8px;
   }
 
-  #text-wrapper h2 {
+  .preview__wrapper {
+    padding: 20px 26px;
+  }
+
+  .preview__wrapper h2 {
     font-size: 1rem;
-    margin-top: 0.3rem;
   }
 
-  #text-wrapper p {
+  .preview__wrapper p {
     font-size: 0.8rem;
   }
 
-  #text-wrapper {
-    padding-bottom: 1.4rem;
-  }
-
-  #socials {
+  .preview__socials {
     right: 0;
     left: 0;
     bottom: 0;
@@ -166,12 +161,12 @@ body {
     height: 70px;
   }
 
-  #share {
-    z-index: 100;
-    align-self: flex-end;
+  .preview__socials::after {
+    display: none;
   }
 
-  #socials::after {
-    display: none;
+  .preview__share {
+    z-index: 100;
+    align-self: flex-end;
   }
 }
