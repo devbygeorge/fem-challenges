@@ -14,52 +14,75 @@ body {
   font-family: Kumbh Sans, sans-serif;
   font-weight: 400;
   font-size: 0.75rem;
+
   color: hsl(238, 29%, 16%);
   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   min-height: 100vh;
-  padding: 1rem;
+  padding: 16px;
 }
 
-.card-container {
+.card {
   width: 900px;
   display: flex;
-  justify-content: end;
-  background: url("../images/illustration-woman-online-desktop.svg") no-repeat
-      left -80px center,
-    url("../images/bg-pattern-desktop.svg") no-repeat -575px calc(50% - 70px),
-    #fff;
-  border-radius: 1rem;
+  background: white;
+  border-radius: 16px;
   position: relative;
 }
 
-.box {
+.card__images {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.card__box {
   position: absolute;
   left: 0;
   top: 50%;
   transform: translate(-50%, -25%);
 }
 
-.faq {
-  width: 58%;
-  padding: 4rem 6rem 5rem;
+.card__woman {
+  position: absolute;
+  left: -80px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.faq h1 {
+.card__pattern {
+  position: absolute;
+  left: -575px;
+  top: 50%;
+  transform: translateY(-57.5%);
+}
+
+.card__woman--mobile,
+.card__pattern--mobile {
+  display: none;
+}
+
+.card__faq {
+  width: 50%;
+  padding: 80px 80px 80px 0;
+}
+
+.card__heading {
   font-size: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 8px;
 }
 
-.question {
+.card__item {
   border-bottom: 1px solid hsl(240, 5%, 91%);
-  padding: 1rem 0.5rem 0.5rem 0;
-  overflow: hidden;
-  position: relative;
+  padding: 16px 0 8px;
 }
 
-.question .question-title {
+.card__title {
+  width: 95%;
   font-size: 0.9rem;
   font-weight: 400;
   color: hsl(237, 12%, 33%);
@@ -68,22 +91,22 @@ body {
   position: relative;
 }
 
-.question .question-title::after {
+.card__title::after {
   content: "";
   position: absolute;
-  right: 0;
-  top: 0.1rem;
-  width: 0.6rem;
-  height: 0.4rem;
-  background: url("../images/icon-arrow-down.svg");
+  right: -17px;
+  top: 5px;
+  width: 10px;
+  height: 8px;
+  background: url("../images/icon-arrow-down.svg") no-repeat;
   transition: all linear 0.1s;
 }
 
-.question .question-title:hover {
+.card__title:hover {
   color: hsl(14, 88%, 65%);
 }
 
-.question p {
+.card__paragraph {
   color: hsl(240, 6%, 50%);
   line-height: 1.2rem;
   max-height: 0px;
@@ -91,64 +114,72 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.show .question-title {
+.show .card__title {
   font-weight: 700;
 }
 
-.show .question-title::after {
+.show .card__title::after {
   transform: rotate(180deg);
 }
 
-.show p {
+.show .card__paragraph {
   max-height: 100px;
   opacity: 1;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   body {
     align-items: flex-start;
-    padding-top: 150px;
   }
-  .card-container {
+
+  .card {
+    margin-top: 120px;
     width: 375px;
-    padding: 2.5rem 1.5rem;
-    display: block;
-    background: url("../images/bg-pattern-mobile.svg") no-repeat center top,
-      #fff;
+    flex-direction: column;
   }
 
-  .card-container::before {
-    content: "";
-    width: 266px;
-    height: 196px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-55%, -55%);
-    background: url("../images/illustration-woman-online-mobile.svg") no-repeat
-      center center/contain;
-  }
-
-  .box {
+  .card__woman,
+  .card__pattern,
+  .card__box {
     display: none;
   }
 
-  .faq {
+  .card__images {
+    width: auto;
+    height: 210px;
+    margin-top: -106px;
+  }
+
+  .card__woman--mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-55%);
+  }
+
+  .card__pattern--mobile {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .card__faq {
     width: 100%;
-    padding: 0;
-    margin-top: 5.5rem;
+    padding: 20px;
   }
 
-  .faq h1 {
+  .card__heading {
     text-align: center;
-    margin-bottom: 1rem;
   }
 
-  .question .question-title {
+  .card__title {
     font-size: 0.85rem;
   }
 
-  .question p {
+  .card__paragraph {
     padding-right: 1.5rem;
   }
 }

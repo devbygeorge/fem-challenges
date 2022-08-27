@@ -7,45 +7,76 @@
     <title>FAQ Accordion Card</title>
   </head>
   <body>
-    <div class="card-container">
-      <img class="box" src="./images/illustration-box-desktop.svg" alt="box" />
-      <div class="faq">
-        <h1>FAQ</h1>
-        <div class="question">
-          <h2 class="question-title">How many team members can I invite?</h2>
-          <p>
-            You can invite up to 2 additional users on the Free plan. There is
-            no limit on team members for the Premium plan.
-          </p>
-        </div>
-        <div class="question">
-          <h2 class="question-title">What is the maximum file upload size?</h2>
-          <p>
-            No more than 2GB. All files in your account must fit your allotted
-            storage space.
-          </p>
-        </div>
-        <div class="question">
-          <h2 class="question-title">How do I reset my password?</h2>
-          <p>
-            Click “Forgot password” from the login page or “Change password”
-            from your profile page. A reset link will be emailed to you.
-          </p>
-        </div>
-        <div class="question">
-          <h2 class="question-title">Can I cancel my subscription?</h2>
-          <p>
-            Yes! Send us a message and we’ll process your request no questions
-            asked.
-          </p>
-        </div>
-        <div class="question">
-          <h2 class="question-title">Do you provide additional support?</h2>
-          <p>
-            Chat and email support is available 24/7. Phone lines are open
-            during normal business hours.
-          </p>
-        </div>
+    <div class="card">
+      <div class="card__images">
+        <img
+          class="card__pattern"
+          src="./images/bg-pattern-desktop.svg"
+          alt="illustration box"
+        />
+        <img
+          class="card__pattern--mobile"
+          src="./images/bg-pattern-mobile.svg"
+          alt="illustration box"
+        />
+        <img
+          class="card__woman"
+          src="./images/illustration-woman-online-desktop.svg"
+          alt="illustration box"
+        />
+        <img
+          class="card__woman--mobile"
+          src="./images/illustration-woman-online-mobile.svg"
+          alt="illustration box"
+        />
+      </div>
+
+      <img
+        class="card__box"
+        src="./images/illustration-box-desktop.svg"
+        alt="illustration box"
+      />
+
+      <div class="card__faq">
+        <h1 class="card__heading">FAQ</h1>
+
+        <ul class="card__list">
+          <li class="card__item">
+            <h2 class="card__title">How many team members can I invite?</h2>
+            <p class="card__paragraph">
+              You can invite up to 2 additional users on the Free plan. There is
+              no limit on team members for the Premium plan.
+            </p>
+          </li>
+          <li class="card__item">
+            <h2 class="card__title">What is the maximum file upload size?</h2>
+            <p class="card__paragraph">
+              No more than 2GB. All files in your account must fit your allotted
+              storage space.
+            </p>
+          </li>
+          <li class="card__item">
+            <h2 class="card__title">How do I reset my password?</h2>
+            <p class="card__paragraph">
+              Click “Forgot password” from the login page or “Change password”
+              from your profile page. A reset link will be emailed to you.
+            </p>
+          </li>
+          <li class="card__item">
+            <h2 class="card__title">Can I cancel my subscription?</h2>
+            <p class="card__paragraph">
+              Yes! Send us a message and we`ll process your request no questions
+              asked.
+            </p>
+          </li>
+          <li class="card__item">
+            <h2 class="card__title">Do you provide additional support?</h2>
+            <p class="card__paragraph">
+              Chat and email support is available 24/7. Phone lines are open
+              during normal business hours.
+            </p>
+          </li>
+        </ul>
       </div>
     </div>
     <script src="script.js"></script>
