@@ -8,164 +8,206 @@
   box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 body {
   font-family: Spartan, sans-serif;
   font-size: 15px;
-  background: url("images/bg-pattern-bottom-mobile.svg") no-repeat right bottom,
-    url("images/bg-pattern-top-mobile.svg") no-repeat left top;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-h1,
-h3,
-p,
-span {
-  font-size: inherit;
-  font-weight: inherit;
+.social__pattern-top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40.5vw;
+  z-index: -1;
 }
 
-#main-container {
-  padding: 4.5rem 2rem;
-  text-align: center;
+.social__pattern-bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 75.5vw;
+  z-index: -1;
 }
 
-#text-wrapper h1 {
+.social__pattern-top--mobile {
+  max-width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  display: none;
+}
+
+.social__pattern-bottom--mobile {
+  max-width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  display: none;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.social {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  grid-template-rows: auto 250px;
+  gap: 80px;
+}
+
+.social__info h1 {
   font-size: 2rem;
   font-weight: 700;
+  margin-bottom: 16px;
   color: hsl(300, 43%, 22%);
 }
 
-#text-wrapper p {
+.social__info p {
   font-weight: 500;
   color: hsl(303, 10%, 53%);
-  margin: 1rem 0;
 }
 
-.review-item {
-  font-weight: 700;
-  background-color: hsl(300, 24%, 96%);
-  color: hsl(300, 43%, 22%);
-  border-radius: 0.5rem;
-  margin: 1rem 0;
-  padding: 1rem 0;
+.social__reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.stars {
-  margin-bottom: 0.5rem;
-}
-
-.stars img {
-  margin-right: 0.3rem;
-}
-
-.comment-item {
+.social__review {
   font-size: 0.8rem;
-  background-color: hsl(300, 43%, 22%);
-  border-radius: 0.5rem;
-  margin: 1rem 0;
-  padding: 2rem;
-  text-align: left;
-  display: grid;
-  grid-template-areas: "img name . ." "img status . ." "text text text text";
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+  background: hsl(300, 24%, 96%);
+  border-radius: 8px;
+  padding: 16px 38px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
 
-.comment-item img {
+.social__review--left {
+  align-self: flex-start;
+}
+
+.social__review--middle {
+  align-self: center;
+}
+
+.social__review--right {
+  align-self: flex-end;
+}
+
+.social__stars {
+  display: flex;
+  gap: 5px;
+}
+
+.social__cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  grid-column: 1/3;
+}
+
+.social__card {
+  font-size: 0.8rem;
+  border-radius: 8px;
+  padding: 32px;
+  background: hsl(300, 43%, 22%);
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 4px;
+}
+
+.social__card--top {
+  align-self: flex-start;
+}
+
+.social__card--middle {
+  align-self: center;
+}
+
+.social__card--bottom {
+  align-self: flex-end;
+}
+
+.social__card img {
   width: 40px;
   border-radius: 50%;
-  margin-right: 0.9rem;
-  grid-area: img;
+  grid-row: 1/3;
+  margin-right: 10px;
 }
 
-.comment-item h3 {
+.social__card h3 {
   font-weight: 500;
   color: hsl(0, 0%, 100%);
-  grid-area: name;
   align-self: flex-end;
 }
 
-.comment-item span {
+.social__card span {
   color: hsl(333, 80%, 67%);
-  grid-area: status;
-  align-self: flex-end;
 }
 
-.comment-item p {
-  color: hsl(300, 24%, 96%);
+.social__card p {
   line-height: 1.5;
-  margin-top: 1rem;
-  grid-area: text;
+  color: hsl(300, 24%, 96%);
+  grid-column: 1/3;
+  margin-top: 8px;
 }
 
-@media (min-width: 1100px) {
+@media (max-width: 1100px) {
   body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: url("images/bg-pattern-bottom-desktop.svg") no-repeat right
-        bottom,
-      url("images/bg-pattern-top-desktop.svg") no-repeat left top;
-  }
-  #main-container {
-    width: 1100px;
-    text-align: left;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
-  }
-  #comments {
-    grid-column: 1/3;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
-    height: 280px;
-  }
-  .comment-item:nth-child(1) {
-    align-self: flex-start;
-  }
-  .comment-item:nth-child(2) {
-    align-self: center;
-  }
-  .comment-item:nth-child(3) {
-    align-self: flex-end;
+    align-items: flex-start;
+    padding: 70px 20px;
   }
 
-  #text-wrapper h1 {
-    width: 300px;
-    line-height: 1;
-  }
-
-  #text-wrapper p {
-    width: 400px;
-    font-size: 0.8rem;
-    line-height: 1.5;
-  }
-
-  #reviews {
+  .social {
     display: flex;
     flex-direction: column;
+    gap: 20px;
   }
 
-  .review-item {
-    display: flex;
-    padding: 1rem 0 1rem 2rem;
-    width: 420px;
-    margin: 0 0 1rem 0;
-    font-size: 0.8rem;
+  .social__info {
+    text-align: center;
   }
 
-  .review-item:nth-child(1) {
-    align-self: flex-start;
-  }
-  .review-item:nth-child(2) {
-    align-self: center;
-  }
-  .review-item:nth-child(3) {
-    align-self: flex-end;
+  .social__review {
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
   }
 
-  .stars {
-    margin: 0 2rem 0 0;
+  .social__cards {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .social__pattern-top,
+  .social__pattern-bottom {
+    display: none;
+  }
+
+  .social__pattern-top--mobile,
+  .social__pattern-bottom--mobile {
+    display: block;
   }
 }
