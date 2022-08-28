@@ -17,102 +17,113 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 32px;
 }
 
-h1 {
-  font-weight: 200;
-  color: hsl(234, 12%, 34%);
-  line-height: 1.4;
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.container--mini {
+  max-width: 500px;
+  margin: 0 auto;
   text-align: center;
-  margin-bottom: 1rem;
 }
 
-h1 span {
+.heading {
+  font-weight: 200;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  color: hsl(234, 12%, 34%);
+}
+
+.heading span {
   font-weight: 600;
   display: block;
 }
 
-p {
-  width: 500px;
+.paragraph {
   font-size: 15px;
+  margin-bottom: 32px;
   color: hsl(229, 6%, 66%);
-  text-align: center;
-  margin: auto;
-  margin-bottom: 2rem;
 }
 
-#wrapper {
+.wrapper {
   display: grid;
-  grid-template-areas:
-    "cyanss redss bluess"
-    "cyanss orangess bluess";
-  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   align-items: center;
-  grid-gap: 2rem;
+  gap: 32px;
 }
 
 .card {
-  width: 320px;
-  height: 220px;
-  padding: 1.2rem 1rem;
+  padding: 24px;
   border-radius: 5px;
   box-shadow: 0 5px 10px hsl(229, 6%, 66%);
+
+  display: flex;
+  flex-direction: column;
 }
 
-.card-cyan {
+.card--cyan {
   border-top: 4px solid hsl(180, 62%, 55%);
-  background: url("images/icon-supervisor.svg") no-repeat right 1.5rem bottom
-    1.5rem;
-  grid-area: cyanss;
+  grid-row: 1/3;
 }
-.card-red {
+
+.card--red {
   border-top: 4px solid hsl(0, 78%, 62%);
-  background: url("images/icon-team-builder.svg") no-repeat right 1.5rem bottom
-    1.5rem;
-  grid-area: redss;
 }
-.card-orange {
+
+.card--orange {
   border-top: 4px solid hsl(34, 97%, 64%);
-  background: url("images/icon-karma.svg") no-repeat right 1.5rem bottom 1.5rem;
-  grid-area: orangess;
 }
-.card-blue {
+
+.card--blue {
   border-top: 4px solid hsl(212, 86%, 64%);
-  background: url("images/icon-calculator.svg") no-repeat right 1.5rem bottom
-    1.5rem;
-  grid-area: bluess;
+  grid-row: 1/3;
+  grid-column: 3/4;
 }
 
 .card h2 {
   font-size: 1.1rem;
   color: hsl(234, 12%, 34%);
-  margin-bottom: 0.4rem;
+  margin-bottom: 6px;
 }
 
 .card p {
-  width: 100%;
   font-size: 0.7rem;
   color: hsl(229, 6%, 66%);
-  text-align: left;
+  height: 50px;
+  margin-bottom: 16px;
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
-@media (max-width: 1030px) {
-  #main-container {
-    width: 390px;
-    padding: 1.5rem;
+.card img {
+  align-self: flex-end;
+}
+
+@media (max-width: 1080px) {
+
+  .container {
+    max-width: 340px;
   }
-  h1 {
+
+  .heading {
     font-size: 1.5rem;
   }
-  p {
-    width: 100%;
+
+  .paragraph {
     font-size: 0.8rem;
   }
-  #wrapper {
-    display: block;
-  }
-  .card {
-    margin-bottom: 2rem;
-    width: 100%;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
 }
