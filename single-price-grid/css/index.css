@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: Karla, sans-serif;
+  background: hsl(204deg, 43%, 93%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 64px 32px;
+}
+
+.cards {
+  max-width: 310px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+@media (min-width: 680px) {
+  .cards {
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card__item {
+  color: white;
+  background: cadetblue;
+  padding: 24px;
+}
+@media (min-width: 680px) {
+  .card__item {
+    padding: 36px;
+  }
+}
+.card__item h2 {
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+}
+@media (min-width: 680px) {
+  .card__item h2 {
+    font-size: 1.4rem;
+  }
+}
+.card__item h3 {
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+@media (min-width: 680px) {
+  .card__item h3 {
+    font-size: 1.1rem;
+  }
+}
+.card__item p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+@media (min-width: 680px) {
+  .card__item p {
+    font-size: 0.9rem;
+  }
+}
+.card__item a {
+  display: block;
+  text-align: center;
+  line-height: 2.7;
+  border-radius: 5px;
+  color: white;
+  background: #a4c21e;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.card__item a:hover {
+  background: #a8c71f;
+}
+.card__item--community {
+  background: white;
+}
+.card__item--community h2 {
+  color: hsl(179deg, 62%, 43%);
+}
+.card__item--community h3 {
+  color: #a4c21e;
+}
+.card__item--community p {
+  color: hsl(218deg, 22%, 67%);
+}
+@media (min-width: 680px) {
+  .card__item--community {
+    grid-column: 1/3;
+  }
+}
+.card__item--subscription {
+  background: hsl(179deg, 62%, 43%);
+}
+.card__item--subscription h3 {
+  margin-bottom: 28px;
+}
+@media (min-width: 680px) {
+  .card__item--subscription h2 {
+    font-size: 1rem;
+  }
+  .card__item--subscription h3 {
+    font-size: 0.85rem;
+  }
+}
+.card__item--whyus {
+  background: #3dd1cf;
+}
+.card__item--whyus p {
+  width: 70%;
+}
+@media (min-width: 680px) {
+  .card__item--whyus h2 {
+    font-size: 1rem;
+  }
+  .card__item--whyus p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+}
+.card__price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.card__price span {
+  font-size: 0.9rem;
+  color: #8fe5e3;
+  display: inline-block;
+  vertical-align: middle;
+}/*# sourceMappingURL=index.css.map */

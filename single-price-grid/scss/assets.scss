@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+$colors: (
+  primary-cyan: hsl(179, 62%, 43%),
+  primary-yellow: hsl(71, 73%, 54%),
+  neutral-gray: hsl(204, 43%, 93%),
+  neutral-blue: hsl(218, 22%, 67%),
+);
+
+$desktop: 680px;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
