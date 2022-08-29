@@ -1,0 +1,165 @@
+@import "./assets";
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+
+  color: white;
+  background: url("../images/bg-mobile.svg") no-repeat center top, color(violet);
+  background-size: 100% auto;
+
+  @include desktop {
+    background: url("../images/bg-desktop.svg") no-repeat left center,
+      color(violet);
+    background-size: auto 100%;
+  }
+
+  padding: 0 64px;
+  min-height: 100vh;
+
+  @include smallScreen {
+    padding: 0 32px;
+  }
+
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  text-align: left;
+  padding: 34px 0;
+
+  img {
+    width: 120px;
+  }
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 48px;
+
+  @include desktop {
+    flex-direction: row;
+    flex: 1;
+  }
+
+  &__image {
+    height: 230px;
+    object-fit: contain;
+
+    @include desktop {
+      width: auto;
+      height: auto;
+    }
+
+    @include smallScreen {
+      height: 200px;
+    }
+  }
+
+  &__text-wrapper {
+    text-align: center;
+
+    @include desktop {
+      text-align: left;
+      width: 420px;
+    }
+
+    h2 {
+      margin-bottom: 16px;
+
+      @include desktop {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font: 0.9rem Open Sans, sans-serif;
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+
+    a {
+      font-size: 0.7rem;
+      line-height: 3.3;
+
+      display: inline-block;
+      border-radius: 32px;
+      padding: 0 64px;
+
+      background: white;
+      box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+
+      &:hover {
+        color: white;
+        background: color(magenta);
+      }
+
+      @include desktop {
+        line-height: 4;
+      }
+    }
+  }
+}
+
+.footer {
+  margin-top: 32px;
+  padding: 32px 0;
+
+  @include desktop {
+    margin: 0;
+  }
+}
+
+.social {
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    @include desktop {
+      justify-content: flex-end;
+    }
+  }
+
+  &__item {
+    a {
+      font-size: 0.8rem;
+      color: white;
+
+      width: 1.8rem;
+      height: 1.8rem;
+
+      border: 1px solid #fff;
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include desktop {
+        font-size: 1.2rem;
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+      &:hover {
+        color: color(magenta);
+
+        border-color: color(magenta);
+      }
+    }
+  }
+}
