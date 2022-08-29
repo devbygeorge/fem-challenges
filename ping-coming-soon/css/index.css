@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  font: 1.25rem Libre Franklin, sans-serif;
+  padding: 32px;
+  text-align: center;
+}
+@media (min-width: 500px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+}
+
+.header {
+  padding: 24px 0;
+}
+.header__logo {
+  width: 50px;
+}
+
+.main {
+  max-width: 500px;
+  margin-inline: auto;
+}
+.main__heading {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: hsl(0deg, 0%, 59%);
+  margin-bottom: 16px;
+}
+.main__heading strong {
+  font-weight: 600;
+  color: black;
+}
+.main__paragraph {
+  font-size: 0.8rem;
+  margin-bottom: 24px;
+}
+.main__form {
+  display: flex;
+  flex-flow: column;
+  gap: 8px;
+  margin-bottom: 32px;
+  position: relative;
+}
+@media (min-width: 500px) {
+  .main__form {
+    flex-flow: row;
+    justify-content: space-between;
+  }
+  .main__form p {
+    position: absolute;
+    top: 48px;
+    left: 32px;
+  }
+}
+.main__form p {
+  display: none;
+  font-size: 0.7rem;
+}
+.main__form .success {
+  display: block;
+  border-color: hsl(118deg, 49%, 41%) !important;
+  color: hsl(118deg, 49%, 41%);
+  font-size: 0.7rem;
+}
+.main__form .failure {
+  display: block;
+  border-color: hsl(354deg, 100%, 66%) !important;
+  color: hsl(354deg, 100%, 66%);
+  font-size: 0.7rem;
+}
+.main__form input {
+  font-size: 0.8rem;
+  line-height: 3.2;
+  border-radius: 32px;
+  outline: none;
+}
+.main__form input[type=text] {
+  color: hsl(223deg, 87%, 63%);
+  border: 1px solid hsl(223deg, 100%, 88%);
+  padding-left: 32px;
+}
+@media (min-width: 500px) {
+  .main__form input[type=text] {
+    width: 67%;
+  }
+}
+.main__form input[type=submit] {
+  border: none;
+  color: white;
+  background: hsl(223deg, 87%, 63%);
+  box-shadow: 0 5px 10px hsl(223deg, 100%, 88%);
+  cursor: pointer;
+}
+.main__form input[type=submit]:hover {
+  background-color: #7ea0f6;
+}
+@media (min-width: 500px) {
+  .main__form input[type=submit] {
+    width: 30%;
+  }
+}
+.main__image {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.footer {
+  font-size: 0.7rem;
+  color: hsl(0deg, 0%, 59%);
+}
+.footer__list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.footer__item a {
+  font-size: 0.9rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(223deg, 87%, 63%);
+  border: 1px solid hsl(223deg, 100%, 88%);
+}/*# sourceMappingURL=index.css.map */

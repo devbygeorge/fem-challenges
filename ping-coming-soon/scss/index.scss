@@ -1,0 +1,159 @@
+@import "./assets";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  font: 1.25rem Libre Franklin, sans-serif;
+  padding: 32px;
+  text-align: center;
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+}
+
+.header {
+  padding: 24px 0;
+
+  &__logo {
+    width: 50px;
+  }
+}
+
+.main {
+  max-width: 500px;
+  margin-inline: auto;
+
+  &__heading {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: color(neutral-gray);
+    margin-bottom: 16px;
+
+    strong {
+      font-weight: 600;
+      color: black;
+    }
+  }
+
+  &__paragraph {
+    font-size: 0.8rem;
+    margin-bottom: 24px;
+  }
+
+  &__form {
+    display: flex;
+    flex-flow: column;
+    gap: 8px;
+    margin-bottom: 32px;
+    position: relative;
+
+    @include desktop {
+      flex-flow: row;
+      justify-content: space-between;
+
+      p {
+        position: absolute;
+        top: 48px;
+        left: 32px;
+      }
+    }
+
+    p {
+      display: none;
+      font-size: 0.7rem;
+    }
+
+    .success {
+      display: block;
+      border-color: color(secondary-green) !important;
+      color: color(secondary-green);
+      font-size: 0.7rem;
+    }
+
+    .failure {
+      display: block;
+      border-color: color(secondary-red) !important;
+      color: color(secondary-red);
+      font-size: 0.7rem;
+    }
+
+    input {
+      font-size: 0.8rem;
+      line-height: 3.2;
+      border-radius: 32px;
+      outline: none;
+
+      &[type="text"] {
+        color: color(primary-blue);
+        border: 1px solid color(secondary-blue);
+        padding-left: 32px;
+
+        @include desktop {
+          width: 67%;
+        }
+      }
+
+      &[type="submit"] {
+        border: none;
+        color: white;
+        background: color(primary-blue);
+        box-shadow: 0 5px 10px color(secondary-blue);
+        cursor: pointer;
+
+        &:hover {
+          background-color: lighten(color(primary-blue), 10);
+        }
+
+        @include desktop {
+          width: 30%;
+        }
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+}
+
+.footer {
+  font-size: 0.7rem;
+  color: color(neutral-gray);
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__item {
+    a {
+      font-size: 0.9rem;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: color(primary-blue);
+      border: 1px solid color(secondary-blue);
+    }
+  }
+}

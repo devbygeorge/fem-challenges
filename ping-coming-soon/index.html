@@ -10,41 +10,50 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <header>
-      <img src="images/logo.svg" alt="ping" />
+    <header class="header">
+      <img class="header__logo" src="images/logo.svg" alt="ping" />
     </header>
-    <main>
-      <h2>We are launching <strong>soon!</strong></h2>
-      <p>Subscribe and get notified</p>
 
-      <form>
-        <input
-          type="text"
-          name="email"
-          id="email"
-          placeholder="Your email address..."
-        />
-        <input type="submit" name="submit" id="submit" value="Notify Me" />
+    <main class="main">
+      <h2 class="main__heading">We are launching <strong>soon!</strong></h2>
+      <p class="main__paragraph">Subscribe and get notified</p>
+
+      <form id="form" class="main__form">
+        <input type="text" id="email" placeholder="Your email address..." />
+        <p id="message"></p>
+        <input type="submit" value="Notify Me" />
       </form>
-      <img src="images/illustration-dashboard.png" alt="dashboard" />
+
+      <img
+        class="main__image"
+        src="images/illustration-dashboard.png"
+        alt="dashboard"
+      />
     </main>
-    <footer>
-      <ul class="socials">
-        <li>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+    <footer class="footer">
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
         </li>
-        <li>
-          <a href="#"><i class="fab fa-twitter"></i></a>
+        <li class="footer__item">
+          <a href="https://twitter.com/" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
         </li>
-        <li>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+        <li class="footer__item">
+          <a href="https://www.instagram.com/" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
         </li>
       </ul>
       &copy; Copyright Ping. All rights reserved.
     </footer>
-    <script src="main.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

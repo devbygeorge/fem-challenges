@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+$colors: (
+  primary-blue: hsl(223, 87%, 63%),
+  secondary-blue: hsl(223, 100%, 88%),
+  secondary-red: hsl(354, 100%, 66%),
+  secondary-green: hsl(118, 49%, 41%),
+  neutral-gray: hsl(0, 0%, 59%),
+  neutral-darkblue: hsl(209, 33%, 12%),
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$desktop: 500px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
