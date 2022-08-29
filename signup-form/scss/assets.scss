@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+$colors: (
+  primary-red: hsl(0, 100%, 74%),
+  primary-green: hsl(154, 59%, 51%),
+  accent: hsl(248, 32%, 49%),
+  neutral-dark: hsl(249, 10%, 26%),
+  neutral-gray: hsl(246, 25%, 77%),
+);
+
+$weights: (
+  regular: 400,
+  medium: 500,
+  semi-bold: 600,
+  bold: 700,
+);
+
+$desktop: 1050px;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@function weight($weight-name) {
+  @return map-get($weights, $weight-name);
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
