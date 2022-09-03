@@ -1,0 +1,37 @@
+@use "../util";
+
+.section {
+  text-align: center;
+
+  &--blue {
+    background: util.$bgVeryDarkDesaturatedBlue;
+    border-top-right-radius: 96px;
+    border-bottom-left-radius: 96px;
+
+    .section__heading,
+    .section__paragraph {
+      color: white;
+    }
+  }
+
+  &__heading {
+    font-size: util.rem(24);
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  &__subheading {
+    font-size: util.rem(20);
+    margin-bottom: 16px;
+  }
+
+  &__paragraph {
+    font-size: util.rem(14.5);
+    line-height: 1.8;
+    color: util.$neutralVeryDarkGrayishBlue;
+
+    &:not(:last-child) {
+      margin-bottom: 48px;
+    }
+  }
+}

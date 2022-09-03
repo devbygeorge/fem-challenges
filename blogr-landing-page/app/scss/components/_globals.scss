@@ -1,0 +1,166 @@
+@use "../util";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: util.$ff-overpass;
+  color: util.$veryDarkBlue;
+  line-height: 1.3;
+}
+
+button {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: util.rem(1200);
+  margin-inline: auto;
+
+  &--px {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  &--pall {
+    padding-left: 32px;
+    padding-top: 64px;
+    padding-right: 32px;
+    padding-bottom: 64px;
+  }
+}
+
+.logo {
+  display: block;
+  width: util.rem(101);
+  height: util.rem(40);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// Buttons
+.button {
+  font-size: util.rem(14);
+  font-family: util.$ff-ubuntu;
+  font-weight: util.$fw-medium;
+  border-radius: util.rem(32);
+
+  width: util.rem(130);
+  height: util.rem(46);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include util.desktop() {
+    font-size: util.rem(16);
+  }
+
+  &:hover {
+    color: util.$neutralVeryDarkGrayishBlue;
+  }
+
+  &--auto {
+    width: auto;
+    height: auto;
+  }
+
+  &--color {
+    color: util.$veryDarkBlue;
+
+    &:hover {
+      color: util.$veryLightRed;
+    }
+
+    @include util.desktop() {
+      color: white;
+
+      &:hover {
+        color: util.$neutralVeryDarkGrayishBlue;
+      }
+    }
+  }
+
+  &--transparent {
+    color: white;
+    border: 1px solid white;
+
+    &:hover {
+      color: util.$lightRed;
+      background: white;
+    }
+  }
+
+  &--white {
+    color: util.$lightRed;
+    background: white;
+
+    &:hover {
+      color: white;
+      background: util.$veryLightRed;
+    }
+  }
+
+  &--gradient-white {
+    color: white;
+    background: linear-gradient(45deg, util.$bgVeryLightRed, util.$bgLightRed);
+
+    &:hover {
+      color: util.$lightRed;
+      border: 1px solid util.$lightRed;
+      background: inherit;
+    }
+
+    @include util.desktop() {
+      color: util.$lightRed;
+      background: white;
+
+      &:hover {
+        color: white;
+        background: util.$veryLightRed;
+      }
+    }
+  }
+}
+
+// Visibility
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: util.$neutralVeryDarkBlue;
+  transition: all 300ms ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+
+  &.open {
+    visibility: visible;
+    opacity: 0.7;
+
+    @include util.desktop() {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}

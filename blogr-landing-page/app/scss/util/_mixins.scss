@@ -1,0 +1,20 @@
+// from 1024px and up
+@mixin desktop() {
+  @media (min-width: 64em) {
+    @content;
+  }
+}
+
+// from 768px and up
+@mixin tablet() {
+  @media (min-width: 48em) {
+    @content;
+  }
+}
+
+// until 1024px
+@mixin no-desktop() {
+  @media (max-width: 64em) {
+    @content;
+  }
+}

@@ -1,0 +1,35 @@
+@use "../util";
+
+.footer {
+  color: util.$neutralGrayBlue;
+  background: util.$neutralVeryDarkBlue;
+  border-top-right-radius: 96px;
+
+  text-align: center;
+
+  &__logo {
+    margin-inline: auto;
+    margin-bottom: 32px;
+  }
+
+  &__links {
+    font-family: util.$ff-ubuntu;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+
+    > div {
+      color: white;
+      font-weight: util.$fw-medium;
+      margin-bottom: 16px;
+    }
+
+    a {
+      margin-bottom: 8px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@use "../util";
+
+.hero {
+  background-image: url("/images/bg-pattern-intro.svg"),
+    linear-gradient(45deg, util.$bgVeryLightRed, util.$bgLightRed);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include util.desktop() {
+    background-position: calc(50% + 440px) center, center;
+  }
+
+  border-bottom-left-radius: 96px;
+  height: util.rem(550);
+  padding-top: 60px;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    font-size: util.rem(32);
+    margin-bottom: 16px;
+
+    @include util.tablet() {
+      font-size: util.rem(64);
+      margin-bottom: 8px;
+    }
+  }
+
+  p {
+    margin-bottom: 28px;
+
+    @include util.tablet() {
+      font-size: util.rem(24);
+      margin-bottom: 32px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
