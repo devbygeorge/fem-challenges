@@ -1,0 +1,21 @@
+@use "../abstract";
+
+body {
+  font-family: abstract.$ff-overpass;
+  color: abstract.$veryDarkBlue;
+  line-height: 1.3;
+}
+
+button {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

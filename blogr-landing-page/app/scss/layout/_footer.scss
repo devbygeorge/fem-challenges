@@ -1,8 +1,8 @@
-@use "../util";
+@use "../abstract";
 
 .footer {
-  color: util.$neutralGrayBlue;
-  background: util.$neutralVeryDarkBlue;
+  color: abstract.$neutralGrayBlue;
+  background: abstract.$neutralVeryDarkBlue;
   border-top-right-radius: 96px;
 
   text-align: center;
@@ -13,7 +13,7 @@
   }
 
   &__links {
-    font-family: util.$ff-ubuntu;
+    font-family: abstract.$ff-ubuntu;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,7 +21,7 @@
 
     > div {
       color: white;
-      font-weight: util.$fw-medium;
+      font-weight: abstract.$fw-medium;
       margin-bottom: 16px;
     }
 

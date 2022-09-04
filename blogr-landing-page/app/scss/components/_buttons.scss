@@ -1,0 +1,85 @@
+@use "../abstract";
+
+.button {
+  font-size: abstract.rem(14);
+  font-family: abstract.$ff-ubuntu;
+  font-weight: abstract.$fw-medium;
+  border-radius: abstract.rem(32);
+
+  width: abstract.rem(130);
+  height: abstract.rem(46);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include abstract.desktop() {
+    font-size: abstract.rem(16);
+  }
+
+  &:hover {
+    color: abstract.$neutralVeryDarkGrayishBlue;
+  }
+
+  &--auto {
+    width: auto;
+    height: auto;
+  }
+
+  &--color {
+    color: abstract.$veryDarkBlue;
+
+    &:hover {
+      color: abstract.$veryLightRed;
+    }
+
+    @include abstract.desktop() {
+      color: white;
+
+      &:hover {
+        color: abstract.$neutralVeryDarkGrayishBlue;
+      }
+    }
+  }
+
+  &--transparent {
+    color: white;
+    border: 1px solid white;
+
+    &:hover {
+      color: abstract.$lightRed;
+      background: white;
+    }
+  }
+
+  &--white {
+    color: abstract.$lightRed;
+    background: white;
+
+    &:hover {
+      color: white;
+      background: abstract.$veryLightRed;
+    }
+  }
+
+  &--gradient-white {
+    color: white;
+    background: linear-gradient(45deg, abstract.$bgVeryLightRed, abstract.$bgLightRed);
+
+    &:hover {
+      color: abstract.$lightRed;
+      border: 1px solid abstract.$lightRed;
+      background: inherit;
+    }
+
+    @include abstract.desktop() {
+      color: abstract.$lightRed;
+      background: white;
+
+      &:hover {
+        color: white;
+        background: abstract.$veryLightRed;
+      }
+    }
+  }
+}

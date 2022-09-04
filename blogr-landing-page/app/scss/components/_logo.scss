@@ -1,0 +1,13 @@
+@use "../abstract";
+
+.logo {
+  display: block;
+  width: abstract.rem(101);
+  height: abstract.rem(40);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
