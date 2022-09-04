@@ -1,4 +1,4 @@
-# frontendmentor-challenges
+# Design builds from frontendmentor.io
 | # | Code  | Demo |
 | --- |---|---|
 | 1 | [stats preview](https://github.com/GiorgiPasieshvili/frontendmentor-challenges/tree/main/stats-preview)  | [Link](https://giorgipasieshvili.github.io/frontendmentor-challenges/stats-preview/) |
