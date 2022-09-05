@@ -1,17 +1,17 @@
-@use "../abstract";
+@use "../abstract" as *;
 
 .hero {
   background-image: url("/images/bg-pattern-intro.svg"),
-    linear-gradient(45deg, abstract.$bgVeryLightRed, abstract.$bgLightRed);
+    linear-gradient(45deg, $c-bg-very-light-red, $c-bg-light-red);
   background-repeat: no-repeat;
   background-position: center;
 
-  @include abstract.desktop() {
+  @include desktop() {
     background-position: calc(50% + 440px) center, center;
   }
 
   border-bottom-left-radius: 96px;
-  height: abstract.rem(550);
+  height: rem(550);
   padding-top: 60px;
   color: white;
 
@@ -22,22 +22,22 @@
   text-align: center;
 
   h1 {
-    font-size: abstract.rem(32);
+    font-size: rem(32);
     margin-bottom: 16px;
 
-    @include abstract.tablet() {
-      font-size: abstract.rem(64);
-      margin-bottom: 8px;
-    }
+    // @include tablet() {
+    //   font-size: rem(64);
+    //   margin-bottom: 8px;
+    // }
   }
 
   p {
     margin-bottom: 28px;
 
-    @include abstract.tablet() {
-      font-size: abstract.rem(24);
-      margin-bottom: 32px;
-    }
+    // @include tablet() {
+    //   font-size: rem(24);
+    //   margin-bottom: 32px;
+    // }
   }
 
   &__buttons {

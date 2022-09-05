@@ -1,0 +1,20 @@
+@use "../abstract" as *;
+
+body {
+  font-family: "Overpass", sans-serif;
+  color: $c-very-dark-blue;
+  line-height: 1.5;
+}
+
+a,
+button,
+header,
+footer {
+  font-family: "Ubuntu", sans-serif;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}

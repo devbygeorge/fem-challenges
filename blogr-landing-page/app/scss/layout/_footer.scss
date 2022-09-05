@@ -1,8 +1,8 @@
-@use "../abstract";
+@use "../abstract" as *;
 
 .footer {
-  color: abstract.$neutralGrayBlue;
-  background: abstract.$neutralVeryDarkBlue;
+  color: $c-neutral-gray-blue;
+  background: $c-neutral-very-dark-blue;
   border-top-right-radius: 96px;
 
   text-align: center;
@@ -13,7 +13,7 @@
   }
 
   &__links {
-    font-family: abstract.$ff-ubuntu;
+    font-family: "Ubuntu", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,7 +21,7 @@
 
     > div {
       color: white;
-      font-weight: abstract.$fw-medium;
+      font-weight: 500;
       margin-bottom: 16px;
     }
 

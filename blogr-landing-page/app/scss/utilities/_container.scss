@@ -1,18 +1,6 @@
-@use "../abstract";
+@use "../abstract" as *;
 
 .container {
-  max-width: abstract.rem(1200);
+  width: min(rem(1200), 100% - 4rem);
   margin-inline: auto;
-
-  &--px {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  &--pall {
-    padding-left: 32px;
-    padding-top: 64px;
-    padding-right: 32px;
-    padding-bottom: 64px;
-  }
 }

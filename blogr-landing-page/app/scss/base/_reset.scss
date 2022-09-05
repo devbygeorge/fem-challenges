@@ -12,9 +12,9 @@
   font: inherit;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+/* Remove list styles on ul, ol, which suggests default styling will be removed */
+ul,
+ol {
   list-style: none;
 }
 
@@ -61,13 +61,3 @@ picture {
     scroll-behavior: auto !important;
   }
 }
-
-// a {
-//   text-decoration: none;
-//   color: inherit;
-// }
-
-// button {
-//   background-color: unset;
-//   border: none;
-// }

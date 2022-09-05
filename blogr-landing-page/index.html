@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blogr - Landing Page</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,59 +15,59 @@
   </head>
   <body>
     <header class="header">
-      <div class="overlay"></div>
-      <div class="container container--px">
-        <nav class="header__nav">
-          <a class="header__logo logo" href="/">
-            <img src="images/logo.svg" alt="Blogr" />
-          </a>
+      <div class="header__wrapper container">
+        <a href="#"><img src="images/logo.svg" alt="Blogr" /></a>
 
-          <button id="btnHamburger" class="header__toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+        <button id="toggle" class="toggle" aria-controls="header-nav" aria-expanded="false">
+          <span class="visually-hidden">menu</span>
+        </button>
 
-          <div class="header__menu">
-            <div class="header__links">
-              <div class="header__item">
-                <button class="header__button">Product</button>
-                <div class="header__submenu">
-                  <a href="#">Overview</a>
-                  <a href="#">Pricing</a>
-                  <a href="#">Marketplace</a>
-                  <a href="#">Features</a>
-                  <a href="#">Integrations</a>
-                </div>
-              </div>
-              <div class="header__item">
-                <button class="header__button">Company</button>
-                <div class="header__submenu">
-                  <a href="#">About</a>
-                  <a href="#">Team</a>
-                  <a href="#">Blog</a>
-                  <a href="#">Careers</a>
-                </div>
-              </div>
-              <div class="header__item">
-                <button class="header__button">Product</button>
-                <div class="header__submenu">
-                  <a href="#">Contact</a>
-                  <a href="#">Newsletter</a>
-                  <a href="#">Linkedin</a>
-                </div>
-              </div>
-            </div>
-            <div class="header__auth">
-              <a href="#" class="button button--auto button--color">Login</a>
-              <a href="#" class="button button--gradient-white">Sign Up</a>
-            </div>
-          </div>
+        <nav id="header-nav" class="header__navbar">
+          <ul class="header__navbar-list">
+            <li class="header__dropdown">
+              <span class="header__dropdown-label">Product</span>
+              <ul class="header__dropdown-list">
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Integrations</a></li>
+              </ul>
+            </li>
+            <li class="header__dropdown">
+              <span class="header__dropdown-label">Company</span>
+              <ul class="header__dropdown-list">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </li>
+            <li class="header__dropdown">
+              <span class="header__dropdown-label">Connect</span>
+              <ul class="header__dropdown-list">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">Linkedin</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="header__navbar-list">
+            <li><a href="#">Login</a></li>
+            <li>
+              <a href="#" class="button button--white button--mobile-gradient"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
 
-    <section class="hero">
+
+
+    <!-- <section class="hero">
       <div class="container--px">
         <h1>A modern publishing platform</h1>
         <p>Grow your audience and build your online brand</p>
@@ -170,7 +171,7 @@
           <a href="#">LinkedIn</a>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <script src="app/js/script.js"></script>
   </body>
 </html>

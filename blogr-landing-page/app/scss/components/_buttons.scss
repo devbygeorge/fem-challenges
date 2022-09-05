@@ -1,85 +1,85 @@
-@use "../abstract";
+@use "../abstract" as *;
 
-.button {
-  font-size: abstract.rem(14);
-  font-family: abstract.$ff-ubuntu;
-  font-weight: abstract.$fw-medium;
-  border-radius: abstract.rem(32);
+// .button {
+//   font-family: "Ubuntu", sans-serif;
+//   font-size: rem(14);
+//   font-weight: 500;
+//   border-radius: rem(32);
 
-  width: abstract.rem(130);
-  height: abstract.rem(46);
+//   width: rem(130);
+//   height: rem(46);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
 
-  @include abstract.desktop() {
-    font-size: abstract.rem(16);
-  }
+//   @include desktop() {
+//     font-size: rem(16);
+//   }
 
-  &:hover {
-    color: abstract.$neutralVeryDarkGrayishBlue;
-  }
+//   &:hover {
+//     color: $c-neutral-very-dark-grayish-blue;
+//   }
 
-  &--auto {
-    width: auto;
-    height: auto;
-  }
+//   &--auto {
+//     width: auto;
+//     height: auto;
+//   }
 
-  &--color {
-    color: abstract.$veryDarkBlue;
+//   &--color {
+//     color: $c-very-dark-blue;
 
-    &:hover {
-      color: abstract.$veryLightRed;
-    }
+//     &:hover {
+//       color: $c-very-light-red;
+//     }
 
-    @include abstract.desktop() {
-      color: white;
+//     @include desktop() {
+//       color: white;
 
-      &:hover {
-        color: abstract.$neutralVeryDarkGrayishBlue;
-      }
-    }
-  }
+//       &:hover {
+//         color: $c-neutral-very-dark-grayish-blue;
+//       }
+//     }
+//   }
 
-  &--transparent {
-    color: white;
-    border: 1px solid white;
+//   &--transparent {
+//     color: white;
+//     border: 1px solid white;
 
-    &:hover {
-      color: abstract.$lightRed;
-      background: white;
-    }
-  }
+//     &:hover {
+//       color: $c-light-red;
+//       background: white;
+//     }
+//   }
 
-  &--white {
-    color: abstract.$lightRed;
-    background: white;
+//   &--white {
+//     color: $c-light-red;
+//     background: white;
 
-    &:hover {
-      color: white;
-      background: abstract.$veryLightRed;
-    }
-  }
+//     &:hover {
+//       color: white;
+//       background: $c-very-light-red;
+//     }
+//   }
 
-  &--gradient-white {
-    color: white;
-    background: linear-gradient(45deg, abstract.$bgVeryLightRed, abstract.$bgLightRed);
+//   &--gradient-white {
+//     color: white;
+//     background: linear-gradient(45deg, $c-bg-very-light-red, $c-bg-light-red);
 
-    &:hover {
-      color: abstract.$lightRed;
-      border: 1px solid abstract.$lightRed;
-      background: inherit;
-    }
+//     &:hover {
+//       color: $c-light-red;
+//       border: 1px solid $c-light-red;
+//       background: inherit;
+//     }
 
-    @include abstract.desktop() {
-      color: abstract.$lightRed;
-      background: white;
+//     @include desktop() {
+//       color: $c-light-red;
+//       background: white;
 
-      &:hover {
-        color: white;
-        background: abstract.$veryLightRed;
-      }
-    }
-  }
-}
+//       &:hover {
+//         color: white;
+//         background: $c-very-light-red;
+//       }
+//     }
+//   }
+// }

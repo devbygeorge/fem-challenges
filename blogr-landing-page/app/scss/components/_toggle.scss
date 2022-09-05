@@ -1,0 +1,25 @@
+@use "../abstract" as *;
+
+.toggle {
+  width: rem(30);
+  aspect-ratio: 1;
+  transition: all 300ms ease-in-out;
+
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+
+  @include desktop() {
+    display: none;
+  }
+
+  background-image: url("/images/icon-hamburger.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  &[aria-expanded="true"] {
+    background-image: url("/images/icon-close.svg");
+    background-size: rem(25);
+  }
+}
