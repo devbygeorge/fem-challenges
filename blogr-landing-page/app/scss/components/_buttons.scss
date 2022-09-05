@@ -1,85 +1,79 @@
 @use "../abstract" as *;
 
-// .button {
-//   font-family: "Ubuntu", sans-serif;
-//   font-size: rem(14);
-//   font-weight: 500;
-//   border-radius: rem(32);
+.button {
+  display: inline-block;
+  padding: rem(17) rem(40);
+  border-radius: rem(40);
+  font-weight: 500;
 
+  &--white {
+    color: $c-light-red;
+    background-color: white;
+
+    &:hover {
+      color: white;
+      background: $c-very-light-red;
+    }
+  }
+
+  &--gradient {
+    color: white;
+    background-image: linear-gradient(
+      45deg,
+      $c-bg-very-light-red,
+      $c-bg-light-red
+    );
+
+    &:hover {
+      color: $c-light-red;
+      outline: 1px solid $c-light-red;
+      background-image: unset;
+    }
+  }
+
+  &--gradient-white {
+    @include mobile() {
+      color: white;
+      background-image: linear-gradient(
+        45deg,
+        $c-bg-very-light-red,
+        $c-bg-light-red
+      );
+
+      &:hover {
+        color: $c-light-red;
+        outline: 1px solid $c-light-red;
+        background-image: unset;
+      }
+    }
+
+    @include desktop() {
+      color: $c-light-red;
+      background-color: white;
+
+      &:hover {
+        color: white;
+        background: $c-very-light-red;
+      }
+    }
+  }
+
+  &--transparent {
+    border: 1px solid white;
+    color: white;
+
+    &:hover {
+      background-color: white;
+      color: $c-light-red;
+    }
+  }
+}
+
+// .button {
 //   width: rem(130);
 //   height: rem(46);
 
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-
 //   @include desktop() {
 //     font-size: rem(16);
-//   }
-
-//   &:hover {
-//     color: $c-neutral-very-dark-grayish-blue;
-//   }
-
-//   &--auto {
-//     width: auto;
-//     height: auto;
-//   }
-
-//   &--color {
-//     color: $c-very-dark-blue;
-
-//     &:hover {
-//       color: $c-very-light-red;
-//     }
-
-//     @include desktop() {
-//       color: white;
-
-//       &:hover {
-//         color: $c-neutral-very-dark-grayish-blue;
-//       }
-//     }
-//   }
-
-//   &--transparent {
-//     color: white;
-//     border: 1px solid white;
-
-//     &:hover {
-//       color: $c-light-red;
-//       background: white;
-//     }
-//   }
-
-//   &--white {
-//     color: $c-light-red;
-//     background: white;
-
-//     &:hover {
-//       color: white;
-//       background: $c-very-light-red;
-//     }
-//   }
-
-//   &--gradient-white {
-//     color: white;
-//     background: linear-gradient(45deg, $c-bg-very-light-red, $c-bg-light-red);
-
-//     &:hover {
-//       color: $c-light-red;
-//       border: 1px solid $c-light-red;
-//       background: inherit;
-//     }
-
-//     @include desktop() {
-//       color: $c-light-red;
-//       background: white;
-
-//       &:hover {
-//         color: white;
-//         background: $c-very-light-red;
-//       }
-//     }
 //   }
 // }

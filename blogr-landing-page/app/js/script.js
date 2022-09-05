@@ -1,5 +1,8 @@
 const navToggle = document.querySelector("#toggle");
 const headerNav = document.querySelector("#header-nav");
+const headerDropdownLabels = document.querySelectorAll(
+  ".header__dropdown-label"
+);
 
 navToggle.addEventListener("click", () => {
   headerNav.hasAttribute("data-visible")
@@ -8,11 +11,13 @@ navToggle.addEventListener("click", () => {
   headerNav.toggleAttribute("data-visible");
 });
 
-// const headerMenuItems = document.querySelectorAll(".header__item");
+headerDropdownLabels.forEach((label) => {
+  const list = label.nextElementSibling;
 
-// headerMenuItems.forEach((item) => {
-//   const button = item.firstElementChild;
-//   button.addEventListener("click", () => {
-//     item.classList.toggle("open");
-//   });
-// });
+  label.addEventListener("click", () => {
+    list.hasAttribute("data-visible")
+      ? label.setAttribute("aria-expanded", false)
+      : label.setAttribute("aria-expanded", true);
+    list.toggleAttribute("data-visible");
+  });
+});

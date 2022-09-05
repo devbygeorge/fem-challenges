@@ -16,47 +16,80 @@
   <body>
     <header class="header">
       <div class="header__wrapper container">
-        <a href="#"><img src="images/logo.svg" alt="Blogr" /></a>
+        <a class="logo" href="#"><img src="images/logo.svg" alt="Blogr" /></a>
 
-        <button id="toggle" class="toggle" aria-controls="header-nav" aria-expanded="false">
+        <button
+          id="toggle"
+          class="toggle"
+          aria-controls="header-nav"
+          aria-expanded="false"
+        >
           <span class="visually-hidden">menu</span>
         </button>
 
         <nav id="header-nav" class="header__navbar">
           <ul class="header__navbar-list">
-            <li class="header__dropdown">
-              <span class="header__dropdown-label">Product</span>
+            <li class="header__navbar-item header__dropdown">
+              <span class="header__dropdown-label" aria-expanded="false">Product</span>
               <ul class="header__dropdown-list">
-                <li><a href="#">Overview</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Marketplace</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Integrations</a></li>
+                <li class="header__dropdown-item">
+                  <a class="header__dropdown-link" href="#">Overview</a>
+                </li>
+                <li class="header__dropdown-item">
+                  <a class="header__dropdown-link" href="#">Pricing</a>
+                </li>
+                <li class="header__dropdown-item">
+                  <a class="header__dropdown-link" href="#">Marketplace</a>
+                </li>
+                <li class="header__dropdown-item">
+                  <a class="header__dropdown-link" href="#">Features</a>
+                </li>
+                <li class="header__dropdown-item">
+                  <a class="header__dropdown-link" href="#">Integrations</a>
+                </li>
               </ul>
             </li>
-            <li class="header__dropdown">
-              <span class="header__dropdown-label">Company</span>
+            <li class="header__navbar-item header__dropdown">
+              <span class="header__dropdown-label" aria-expanded="false">Company</span>
               <ul class="header__dropdown-list">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Careers</a></li>
+                <li class="header__dropdown-item">
+                  <a class="header__dropdown-link" href="#">About</a>
+                </li>
+                <li class="header__dropdown-item">
+                  <a class="header__dropdown-link" href="#">Team</a>
+                </li>
+                <li class="header__dropdown-item">
+                  <a class="header__dropdown-link" href="#">Blog</a>
+                </li>
+                <li class="header__dropdown-item">
+                  <a class="header__dropdown-link" href="#">Careers</a>
+                </li>
               </ul>
             </li>
-            <li class="header__dropdown">
-              <span class="header__dropdown-label">Connect</span>
+            <li class="header__navbar-item header__dropdown">
+              <span class="header__dropdown-label" aria-expanded="false">Connect</span>
               <ul class="header__dropdown-list">
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Newsletter</a></li>
-                <li><a href="#">Linkedin</a></li>
+                <li class="header__dropdown-item">
+                  <a class="header__dropdown-link" href="#">Contact</a>
+                </li>
+                <li class="header__dropdown-item">
+                  <a class="header__dropdown-link" href="#">Newsletter</a>
+                </li>
+                <li class="header__dropdown-item">
+                  <a class="header__dropdown-link" href="#">Linkedin</a>
+                </li>
               </ul>
             </li>
           </ul>
 
           <ul class="header__navbar-list">
-            <li><a href="#">Login</a></li>
-            <li>
-              <a href="#" class="button button--white button--mobile-gradient"
+            <li class="header__navbar-item">
+              <a class="header__navbar-link" href="#">Login</a>
+            </li>
+            <li class="header__navbar-item">
+              <a
+                href="#"
+                class="button button--gradient-white"
                 >Sign Up</a
               >
             </li>
@@ -64,8 +97,6 @@
         </nav>
       </div>
     </header>
-
-
 
     <!-- <section class="hero">
       <div class="container--px">

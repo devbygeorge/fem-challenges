@@ -1,0 +1,10 @@
+@use "../abstract" as *;
+
+.logo {
+  display: block;
+  width: rem(72);
+
+  @include desktop() {
+    width: rem(102);
+  }
+}
