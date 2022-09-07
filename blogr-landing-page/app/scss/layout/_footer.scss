@@ -1,35 +1,64 @@
 @use "../abstract" as *;
 
 .footer {
-  color: $c-neutral-gray-blue;
-  background: $c-neutral-very-dark-blue;
-  border-top-right-radius: 96px;
+  background-color: $c-neutral-very-dark-blue;
+  border-top-right-radius: rem(96);
+  padding: rem(64) 0;
+  font-weight: 500;
 
-  text-align: center;
-
-  &__logo {
-    margin-inline: auto;
-    margin-bottom: 32px;
+  @include mobile() {
+    border-top-right-radius: rem(88);
+    text-align: center;
   }
 
-  &__links {
-    font-family: "Ubuntu", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 32px;
+  &__logo {
+    @include mobile() {
+      width: rem(88);
+      margin-bottom: rem(70);
+    }
+  }
 
-    > div {
-      color: white;
-      font-weight: 500;
-      margin-bottom: 16px;
+  &__navbar {
+    @include desktop() {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__navbar-list {
+    @include mobile() {
+      &:not(:last-child) {
+        margin-bottom: rem(45);
+      }
     }
 
-    a {
-      margin-bottom: 8px;
-      &:hover {
-        text-decoration: underline;
-      }
+    @include desktop() {
+      padding-top: rem(10);
+    }
+  }
+
+  &__navbar-label {
+    color: white;
+    margin-bottom: rem(35);
+
+    @include desktop() {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__navbar-item {
+    margin-bottom: rem(17);
+
+    @include desktop() {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__navbar-link {
+    color: $c-neutral-gray-blue;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

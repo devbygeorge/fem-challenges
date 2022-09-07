@@ -3,8 +3,8 @@
 body {
   font-family: "Overpass", sans-serif;
   color: $c-very-dark-blue;
-  background-color: #222;
   line-height: 1;
+  overflow-x: hidden;
 }
 
 a,
@@ -18,3 +18,4 @@ a {
   text-decoration: none;
   color: inherit;
 }
+

@@ -1,0 +1,13 @@
+@use "../abstract" as *;
+
+.hide-for-mobile {
+  @include mobile() {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include desktop() {
+    display: none;
+  }
+}

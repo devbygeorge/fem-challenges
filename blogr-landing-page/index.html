@@ -30,7 +30,9 @@
         <nav id="header-nav" class="header__navbar">
           <ul class="header__navbar-list">
             <li class="header__navbar-item header__dropdown">
-              <span class="header__dropdown-label" aria-expanded="false">Product</span>
+              <span class="header__dropdown-label" aria-expanded="false"
+                >Product</span
+              >
               <ul class="header__dropdown-list">
                 <li class="header__dropdown-item">
                   <a class="header__dropdown-link" href="#">Overview</a>
@@ -50,7 +52,9 @@
               </ul>
             </li>
             <li class="header__navbar-item header__dropdown">
-              <span class="header__dropdown-label" aria-expanded="false">Company</span>
+              <span class="header__dropdown-label" aria-expanded="false"
+                >Company</span
+              >
               <ul class="header__dropdown-list">
                 <li class="header__dropdown-item">
                   <a class="header__dropdown-link" href="#">About</a>
@@ -67,7 +71,9 @@
               </ul>
             </li>
             <li class="header__navbar-item header__dropdown">
-              <span class="header__dropdown-label" aria-expanded="false">Connect</span>
+              <span class="header__dropdown-label" aria-expanded="false"
+                >Connect</span
+              >
               <ul class="header__dropdown-list">
                 <li class="header__dropdown-item">
                   <a class="header__dropdown-link" href="#">Contact</a>
@@ -87,122 +93,178 @@
               <a class="header__navbar-link" href="#">Login</a>
             </li>
             <li class="header__navbar-item">
-              <a
-                href="#"
-                class="button button--gradient-white"
-                >Sign Up</a
-              >
+              <a href="#" class="button button--gradient-white">Sign Up</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <!-- <section class="hero">
-      <div class="container--px">
-        <h1>A modern publishing platform</h1>
-        <p>Grow your audience and build your online brand</p>
-        <div class="hero__buttons">
-          <a href="#" class="button button--white">Start for Free</a>
-          <a href="#" class="button button--transparent">Learn More</a>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero__title">A modern publishing platform</h1>
+          <p class="hero__desc">
+            Grow your audience and build your online brand
+          </p>
+          <ul class="hero__list">
+            <li><a class="button button--white" href="#">Start for Free</a></li>
+            <li>
+              <a class="button button--transparent" href="#">Learn More</a>
+            </li>
+          </ul>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section container--pall">
-      <h2 class="section__heading">Designed for the future</h2>
-      <div class="container">
-        <div class="section__image section__image--editor"></div>
-        <div class="section__text">
-          <h3 class="section__subheading">Introducing an extensible editor</h3>
-          <p class="section__paragraph">
-            Blogr features an exceedingly intuitive interface which lets you
-            focus on one thing: creating content. The editor supports management
-            of multiple blogs and allows easy manipulation of embeds such as
-            images, videos, and Markdown. Extensibility with plugins and themes
-            provide easy ways to add functionality or change the looks of a
-            blog.
-          </p>
-          <h3 class="section__subheading">Robust content management</h3>
-          <p class="section__paragraph">
-            Flexible content management enables users to easily move through
-            posts. Increase the usability of your blog by adding customized
-            categories, sections, format, or flow. With this functionality,
-            you’re in full control.
-          </p>
-        </div>
-      </div>
-    </section>
+      <section class="section section--design">
+        <h2 class="section__heading">Designed for the future</h2>
 
-    <section class="section section--blue">
-      <div class="container container--pall">
-        <div class="section__image section__image--phones"></div>
-        <div class="section__text">
-          <h2 class="section__heading">State of the Art Infrastructure</h2>
-          <p class="section__paragraph">
-            With reliability and speed in mind, worldwide data centers provide
-            the backbone for ultra-fast connectivity. This ensures your site
-            will load instantly, no matter where your readers are, keeping your
-            site competitive.
-          </p>
+        <div class="section__wrapper container">
+          <div class="section__img">
+            <img
+              class="hide-for-mobile"
+              src="images/illustration-editor-desktop.svg"
+              alt="Illustration Editor"
+            />
+            <img
+              class="hide-for-desktop"
+              src="images/illustration-editor-mobile.svg"
+              alt="Illustration Editor"
+            />
+          </div>
+          <div class="section__text">
+            <h3 class="section__subheading">
+              Introducing an extensible editor
+            </h3>
+            <p class="section__paragraph">
+              Blogr features an exceedingly intuitive interface which lets you
+              focus on one thing: creating content. The editor supports
+              management of multiple blogs and allows easy manipulation of
+              embeds such as images, videos, and Markdown. Extensibility with
+              plugins and themes provide easy ways to add functionality or
+              change the looks of a blog.
+            </p>
+            <h3 class="section__subheading">Robust content management</h3>
+            <p class="section__paragraph">
+              Flexible content management enables users to easily move through
+              posts. Increase the usability of your blog by adding customized
+              categories, sections, format, or flow. With this functionality,
+              you’re in full control.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section">
-      <div class="container container--pall">
-        <div class="section__image section__image--laptop"></div>
-        <div class="section__text">
-          <h3 class="section__subheading">Free, open, simple</h3>
-          <p class="section__paragraph">
-            Blogr is a free and open source application backed by a large
-            community of helpful developers. It supports features such as code
-            syntax highlighting, RSS feeds, social media integration,
-            third-party commenting tools, and works seamlessly with Google
-            Analytics. The architecture is clean and is relatively easy to
-            learn.
-          </p>
-          <h3 class="section__subheading">Powerful tooling</h3>
-          <p class="section__paragraph">
-            Batteries included. We built a simple and straightforward CLI tool
-            that makes customization and deployment a breeze, but capable of
-            producing even the most complicated sites.
-          </p>
+      <section class="section section--state">
+        <div class="section__wrapper container">
+          <div class="section__img">
+            <img
+              src="images/illustration-phones.svg"
+              alt="Illustration Phones"
+            />
+          </div>
+          <div class="section__text">
+            <h2 class="section__heading">State of the Art Infrastructure</h2>
+            <p class="section__paragraph">
+              With reliability and speed in mind, worldwide data centers provide
+              the backbone for ultra-fast connectivity. This ensures your site
+              will load instantly, no matter where your readers are, keeping
+              your site competitive.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section class="section section--feature">
+        <div class="section__wrapper container">
+          <div class="section__img">
+            <img
+              class="hide-for-mobile"
+              src="images/illustration-laptop-desktop.svg"
+              alt="Illustration Laptop"
+            />
+            <img
+              class="hide-for-desktop"
+              src="images/illustration-laptop-mobile.svg"
+              alt="Illustration Laptop"
+            />
+          </div>
+          <div class="section__text">
+            <h3 class="section__subheading">Free, open, simple</h3>
+            <p class="section__paragraph">
+              Blogr is a free and open source application backed by a large
+              community of helpful developers. It supports features such as code
+              syntax highlighting, RSS feeds, social media integration,
+              third-party commenting tools, and works seamlessly with Google
+              Analytics. The architecture is clean and is relatively easy to
+              learn.
+            </p>
+            <h3 class="section__subheading">Powerful tooling</h3>
+            <p class="section__paragraph">
+              Batteries included. We built a simple and straightforward CLI tool
+              that makes customization and deployment a breeze, but capable of
+              producing even the most complicated sites.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
-      <div class="container container--pall">
-        <a href="/" class="footer__logo logo">
-          <img src="images/logo.svg" alt="Blogr" />
-        </a>
+      <div class="container">
+        <nav class="footer__navbar">
+          <a class="footer__logo logo" href="#"
+            ><img src="images/logo.svg" alt="Blogr"
+          /></a>
 
-        <div class="footer__links">
-          <div>Product</div>
-          <a href="#">Overview</a>
-          <a href="#">Pricing</a>
-          <a href="#">Marketplace</a>
-          <a href="#">Features</a>
-          <a href="#">Integrations</a>
-        </div>
-
-        <div class="footer__links">
-          <div>Company</div>
-          <a href="#">About</a>
-          <a href="#">Team</a>
-          <a href="#">Blog</a>
-          <a href="#">Careers</a>
-        </div>
-
-        <div class="footer__links">
-          <div>Connect</div>
-          <a href="#">Contact</a>
-          <a href="#">Newsletter</a>
-          <a href="#">LinkedIn</a>
-        </div>
+          <ul class="footer__navbar-list">
+            <div class="footer__navbar-label">Product</div>
+            <li class="footer__navbar-item">
+              <a class="footer__navbar-link" href="#">Overview</a>
+            </li>
+            <li class="footer__navbar-item">
+              <a class="footer__navbar-link" href="#">Pricing</a>
+            </li>
+            <li class="footer__navbar-item">
+              <a class="footer__navbar-link" href="#">Marketplace</a>
+            </li>
+            <li class="footer__navbar-item">
+              <a class="footer__navbar-link" href="#">Features</a>
+            </li>
+            <li class="footer__navbar-item">
+              <a class="footer__navbar-link" href="#">Integrations</a>
+            </li>
+          </ul>
+          <ul class="footer__navbar-list">
+            <div class="footer__navbar-label">Company</div>
+            <li class="footer__navbar-item">
+              <a class="footer__navbar-link" href="#">About</a>
+            </li>
+            <li class="footer__navbar-item">
+              <a class="footer__navbar-link" href="#">Team</a>
+            </li>
+            <li class="footer__navbar-item">
+              <a class="footer__navbar-link" href="#">Blog</a>
+            </li>
+            <li class="footer__navbar-item">
+              <a class="footer__navbar-link" href="#">Careers</a>
+            </li>
+          </ul>
+          <ul class="footer__navbar-list">
+            <div class="footer__navbar-label">Connect</div>
+            <li class="footer__navbar-item">
+              <a class="footer__navbar-link" href="#">Contact</a>
+            </li>
+            <li class="footer__navbar-item">
+              <a class="footer__navbar-link" href="#">Newsletter</a>
+            </li>
+            <li class="footer__navbar-item">
+              <a class="footer__navbar-link" href="#">Linkedin</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </footer> -->
+    </footer>
     <script src="app/js/script.js"></script>
   </body>
 </html>

@@ -1,10 +1,14 @@
 @use "../abstract" as *;
 
 .logo {
-  display: block;
+  display: inline-block;
   width: rem(72);
 
   @include desktop() {
     width: rem(102);
+  }
+
+  img {
+    width: 100%;
   }
 }
