@@ -135,14 +135,14 @@ $navbar-items-space: rem(30);
       right: 0;
       transform: translateY(-50%);
 
-      background-image: url("/images/icon-arrow-dark.svg");
+      background-image: url("../images/icon-arrow-dark.svg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: right top;
       transition: all 150ms ease-in-out;
 
       @include desktop() {
-        background-image: url("/images/icon-arrow-light.svg");
+        background-image: url("../images/icon-arrow-light.svg");
       }
     }
 

@@ -117,7 +117,7 @@
 
     border-top-right-radius: rem(88);
     border-bottom-left-radius: rem(88);
-    background-image: url("/images/bg-pattern-circles.svg"),
+    background-image: url("../images/bg-pattern-circles.svg"),
       linear-gradient(
         to bottom,
         $c-bg-very-dark-gray-blue,
@@ -145,7 +145,7 @@
       border-top-right-radius: rem(96);
       border-bottom-left-radius: rem(96);
 
-      background-image: url("/images/bg-pattern-circles.svg"),
+      background-image: url("../images/bg-pattern-circles.svg"),
         linear-gradient(
           to right,
           $c-bg-very-dark-gray-blue,

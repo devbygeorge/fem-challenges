@@ -13,13 +13,13 @@
     display: none;
   }
 
-  background-image: url("/images/icon-hamburger.svg");
+  background-image: url("../images/icon-hamburger.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 
   &[aria-expanded="true"] {
-    background-image: url("/images/icon-close.svg");
+    background-image: url("../images/icon-close.svg");
     background-size: rem(23);
   }
 }
