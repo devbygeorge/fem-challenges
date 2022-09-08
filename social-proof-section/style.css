@@ -156,7 +156,7 @@ body {
   margin-right: 10px;
 }
 
-.social__card h3 {
+.social__card h2 {
   font-weight: 500;
   color: hsl(0, 0%, 100%);
   align-self: flex-end;

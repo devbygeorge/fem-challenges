@@ -10,24 +10,29 @@
 
 body {
   font-family: Poppins, sans-serif;
+  background: url("../images/bg-intro-mobile.png") no-repeat center top/cover,
+    color(primary-red);
+
+  @include desktop {
+    background: url("../images/bg-intro-desktop.png"), color(primary-red);
+  }
+}
+
+main {
   padding: 64px 24px;
 
   color: white;
-  background: url("../images/bg-intro-mobile.png") no-repeat center top/cover,
-    color(primary-red);
 
   max-width: 600px;
   margin-inline: auto;
 
   @include desktop {
-    background: url("../images/bg-intro-desktop.png"), color(primary-red);
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    max-width: 1100px;
     min-height: 100vh;
+    max-width: 1100px;
   }
 }
 

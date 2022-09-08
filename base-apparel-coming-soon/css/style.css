@@ -10,7 +10,7 @@
   text-decoration: none;
 }
 
-body {
+main {
   font-family: Josefin Sans, sans-serif;
   background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
   min-height: 100vh;
@@ -100,7 +100,7 @@ body {
 }
 
 @media (min-width: 900px) {
-  body {
+  main {
     display: grid;
     grid-template-columns: 55% 45%;
     grid-template-rows: auto 1fr;
