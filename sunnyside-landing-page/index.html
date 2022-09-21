@@ -11,159 +11,207 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/main.css" />
   </head>
   <body>
-    <header id="header">
+    <header class="header">
       <div class="container">
-        <div class="header-top">
-          <img class="logo" src="images/logo.svg" alt="sunnyside" />
-          <img id="menu-icon" src="images/icon-hamburger.svg" alt="menu bars" />
-          <nav id="nav" class="nav">
-            <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a class="btn" href="#">CONTACT</a></li>
-            </ul>
-          </nav>
-        </div>
+        <nav class="header__nav">
+          <a href="#" class="logo">
+            <img src="images/logo.svg" alt="sunnyside" />
+          </a>
 
-        <h1>We are creatives</h1>
+          <ul id="primary-nav" class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">About</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Services</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Projects</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link button" href="#">CONTACT</a>
+            </li>
+          </ul>
 
-        <img class="arrow" src="images/icon-arrow-down.svg" alt="arrow down" />
+          <button id="mobile-menu" class="mobile-menu">
+            <img src="images/icon-hamburger.svg" alt="Menu Bars" />
+          </button>
+        </nav>
       </div>
     </header>
-    <main id="main">
-      <section class="services">
-        <section id="order-2" class="service-text">
-          <h2>Transform your brand</h2>
-          <p>
-            We are a full-service creative agency specializing in helping brands
-            grow fast. Engage your clients through compelling visuals that do
-            most of the marketing for you.
-          </p>
-          <a class="btn btn-yellow" href="#">Learn more</a>
-        </section>
-        <img
-          id="order-1"
-          class="service-img"
-          src="images/desktop/image-transform.jpg"
-          alt="egg"
-        />
-        <img
-          id="order-3"
-          class="service-img"
-          src="images/desktop/image-stand-out.jpg"
-          alt="glass"
-        />
-        <section id="order-4" class="service-text">
-          <h2>Stand out to the right audience</h2>
-          <p>
-            Using a collaborative formula of designers, researchers,
-            photographers, videographers, and copywriters, we’ll build and
-            extend your brand in digital places.
-          </p>
-          <a class="btn btn-red" href="#">Learn more</a>
-        </section>
-        <section id="order-5" class="service-text short text-green">
-          <img
-            class="service-img"
-            src="images/desktop/image-graphic-design.jpg"
-            alt="cherries"
-          />
-          <h2>Graphic design</h2>
-          <p>
-            Great design makes you memorable. We deliver artwork that
-            underscores your brand message and captures potential clients’
-            attention.
-          </p>
-        </section>
-        <section id="order-6" class="service-text short text-blue">
-          <img
-            class="service-img"
-            src="images/desktop/image-photography.jpg"
-            alt="cherries"
-          />
-          <h2>Photography</h2>
-          <p>
-            Increase your credibility by getting the most stunning, high-quality
-            photos that improve your business image.
-          </p>
-        </section>
+
+    <main class="main">
+      <!-- Hero Section Start -->
+      <section class="hero">
+        <h1>We are creatives</h1>
+        <img class="arrow" src="images/icon-arrow-down.svg" alt="arrow down" />
       </section>
-      <section class="testimonials">
-        <h3>Client testimonials</h3>
-        <div class="container">
-          <div class="testimonial-item">
-            <img src="images/image-emily.jpg" alt="profile pic" />
-            <p>
-              We put our trust in Sunnyside and they delivered, making sure our
-              needs were met and deadlines were always hit.
+      <!-- Hero Section End -->
+
+      <!-- Grid Section Start -->
+      <section class="grid">
+        <div class="grid__item"></div>
+        <div class="grid__item">
+          <div>
+            <h3 class="grid__heading">Transform your brand</h3>
+            <p class="grid__paragraph">
+              We are a full-service creative agency specializing in helping
+              brands grow fast. Engage your clients through compelling visuals
+              that do most of the marketing for you.
             </p>
-            <h4>Emily R.</h4>
-            <span> Marketing Director </span>
+            <a class="grid__button grid__button--yellow" href="#">Learn more</a>
           </div>
-          <div class="testimonial-item">
-            <img src="images/image-thomas.jpg" alt="profile pic" />
-            <p>
-              Sunnyside’s enthusiasm coupled with their keen interest in our
-              brand’s success made it a satisfying and enjoyable experience.
+        </div>
+        <div class="grid__item"></div>
+        <div class="grid__item">
+          <div>
+            <h3 class="grid__heading">Stand out to the right audience</h3>
+            <p class="grid__paragraph">
+              Using a collaborative formula of designers, researchers,
+              photographers, videographers, and copywriters, we’ll build and
+              extend your brand in digital places.
             </p>
-            <h4>Thomas S.</h4>
-            <span> Chief Operating Officer </span>
+            <a class="grid__button grid__button--red" href="#">Learn more</a>
           </div>
-          <div class="testimonial-item">
-            <img src="images/image-jennie.jpg" alt="profile pic" />
-            <p>
-              Incredible end result! Our sales increased over 400% when we
-              worked with Sunnyside. Highly recommended!
+        </div>
+        <div class="grid__item grid__item--united">
+          <div>
+            <h3 class="grid__heading">Graphic design</h3>
+            <p class="grid__paragraph">
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients’
+              attention.
             </p>
-            <h4>Jennie F.</h4>
-            <span> Business Owner </span>
+          </div>
+        </div>
+        <div class="grid__item grid__item--united">
+          <div>
+            <h3 class="grid__heading">Photography</h3>
+            <p class="grid__paragraph">
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
           </div>
         </div>
       </section>
-      <section class="gallery">
-        <img
-          src="images/desktop/image-gallery-milkbottles.jpg"
-          alt="milk bottles"
-        />
-        <img src="images/desktop/image-gallery-orange.jpg" alt="orange" />
-        <img src="images/desktop/image-gallery-cone.jpg" alt="ice cream" />
-        <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="sugar" />
+      <!-- Grid Section End -->
+
+      <!-- Testimonials Section Start -->
+      <section class="testimonials">
+        <div class="container">
+          <h2 class="testimonials__heading">Client testimonials</h2>
+
+          <div class="testimonials__grid">
+            <div class="testimonials__item">
+              <img
+                class="testimonials__user-img"
+                src="images/image-emily.jpg"
+                alt="Emily R."
+              />
+              <p class="testimonials__user-comment">
+                We put our trust in Sunnyside and they delivered, making sure
+                our needs were met and deadlines were always hit.
+              </p>
+              <strong class="testimonials__user-name">Emily R.</strong>
+              <span class="testimonials__user-role">Marketing Director</span>
+            </div>
+
+            <div class="testimonials__item">
+              <img
+                class="testimonials__user-img"
+                src="images/image-thomas.jpg"
+                alt="Thomas S."
+              />
+              <p class="testimonials__user-comment">
+                Sunnyside’s enthusiasm coupled with their keen interest in our
+                brand’s success made it a satisfying and enjoyable experience.
+              </p>
+              <strong class="testimonials__user-name">Thomas S.</strong>
+              <span class="testimonials__user-role"
+                >Chief Operating Officer</span
+              >
+            </div>
+
+            <div class="testimonials__item">
+              <img
+                class="testimonials__user-img"
+                src="images/image-jennie.jpg"
+                alt="Jennie F."
+              />
+              <p class="testimonials__user-comment">
+                Incredible end result! Our sales increased over 400% when we
+                worked with Sunnyside. Highly recommended!
+              </p>
+              <strong class="testimonials__user-name">Jennie F.</strong>
+              <span class="testimonials__user-role">Business Owner</span>
+            </div>
+          </div>
+        </div>
       </section>
+      <!-- Testimonials Section End -->
+
+      <!-- Grid 2 Section Start -->
+      <section class="grid-2">
+        <div class="grid-2__item"></div>
+        <div class="grid-2__item"></div>
+        <div class="grid-2__item"></div>
+        <div class="grid-2__item"></div>
+      </section>
+      <!-- Grid 2 Section End -->
     </main>
 
-    <footer id="footer">
-      <img class="logo" src="images/logo.svg" alt="sunnyside" />
-      <nav class="nav">
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Projects</a></li>
+    <footer class="footer">
+      <a href="#" class="footer__logo logo">
+        <img src="images/logo.svg" alt="sunnyside" />
+      </a>
+
+      <nav class="footer__nav">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#">About</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#">Services</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#">Projects</a>
+          </li>
         </ul>
       </nav>
-      <ul class="socials">
-        <li>
-          <a href="#"><i class="fab fa-facebook-square"></i></a>
+
+      <ul class="footer__social-list">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#">
+            <i class="fab fa-facebook-square"></i>
+          </a>
         </li>
-        <li>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
         </li>
-        <li>
-          <a href="#"><i class="fab fa-twitter"></i></a>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
         </li>
-        <li>
-          <a href="#"><i class="fab fa-pinterest"></i></a>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#">
+            <i class="fab fa-pinterest"></i>
+          </a>
         </li>
       </ul>
     </footer>
 
-    <script>
-      document.querySelector("#menu-icon").addEventListener("click", () => {
-        document.querySelector("#nav").classList.toggle("nav--active");
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
