@@ -1,6 +1,6 @@
 const mobileMenu = document.querySelector("#mobile-menu");
-const primaryNav = document.querySelector("#primary-nav");
+const headerNavList = document.querySelector("#header-nav-list");
 
 mobileMenu.addEventListener('click', () => {
-  primaryNav.classList.toggle('open');
+  headerNavList.classList.toggle("open");
 });
