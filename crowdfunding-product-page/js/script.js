@@ -69,7 +69,10 @@ modalSelectionItems.forEach((item) => {
 });
 
 modalSelectionButtons.forEach((button) => {
-  button.addEventListener("click", () => openSuccessModal());
+  button.addEventListener("click", () => {
+    openSuccessModal();
+    cleanSelectionModalItems();
+  });
 });
 
 modalSuccessCloseButton.addEventListener("click", () => {
