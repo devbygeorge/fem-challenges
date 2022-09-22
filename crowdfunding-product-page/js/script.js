@@ -55,24 +55,25 @@ aboutItemButtons.forEach((button) => {
 
       if (modalItemName === aboutItemName) {
         item.classList.add("modal-selection__item--selected");
-        console.log(modalItemName === aboutItemName);
       }
     });
   });
 });
 
 modalSelectionItems.forEach((item) => {
-  item.addEventListener("click", () => {
+  item.addEventListener("click", (e) => {
     cleanSelectionModalItems();
-    item.classList.add("modal-selection__item--selected");
+
+    isButtonClicked = e.target.classList.contains("modal-selection__button");
+
+    if (!isButtonClicked) {
+      item.classList.add("modal-selection__item--selected");
+    }
   });
 });
 
 modalSelectionButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    openSuccessModal();
-    cleanSelectionModalItems();
-  });
+  button.addEventListener("click", () => openSuccessModal());
 });
 
 modalSuccessCloseButton.addEventListener("click", () => {
