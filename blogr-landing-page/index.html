@@ -30,8 +30,8 @@
         <nav id="header-nav" class="header__navbar">
           <ul class="header__navbar-list">
             <li class="header__navbar-item header__dropdown">
-              <span class="header__dropdown-label" aria-expanded="false"
-                >Product</span
+              <button class="header__dropdown-label" aria-expanded="false"
+                >Product</button
               >
               <ul class="header__dropdown-list">
                 <li class="header__dropdown-item">
@@ -52,8 +52,8 @@
               </ul>
             </li>
             <li class="header__navbar-item header__dropdown">
-              <span class="header__dropdown-label" aria-expanded="false"
-                >Company</span
+              <button class="header__dropdown-label" aria-expanded="false"
+                >Company</button
               >
               <ul class="header__dropdown-list">
                 <li class="header__dropdown-item">
@@ -71,8 +71,8 @@
               </ul>
             </li>
             <li class="header__navbar-item header__dropdown">
-              <span class="header__dropdown-label" aria-expanded="false"
-                >Connect</span
+              <button class="header__dropdown-label" aria-expanded="false"
+                >Connect</button
               >
               <ul class="header__dropdown-list">
                 <li class="header__dropdown-item">
@@ -212,56 +212,64 @@
 
     <footer class="footer">
       <div class="container">
-        <nav class="footer__navbar">
+        <nav id="footer-nav" class="footer__navbar">
           <a class="footer__logo logo" href="#"
             ><img src="images/logo.svg" alt="Blogr"
           /></a>
 
-          <ul class="footer__navbar-list">
-            <div class="footer__navbar-label">Product</div>
-            <li class="footer__navbar-item">
-              <a class="footer__navbar-link" href="#">Overview</a>
-            </li>
-            <li class="footer__navbar-item">
-              <a class="footer__navbar-link" href="#">Pricing</a>
-            </li>
-            <li class="footer__navbar-item">
-              <a class="footer__navbar-link" href="#">Marketplace</a>
-            </li>
-            <li class="footer__navbar-item">
-              <a class="footer__navbar-link" href="#">Features</a>
-            </li>
-            <li class="footer__navbar-item">
-              <a class="footer__navbar-link" href="#">Integrations</a>
-            </li>
-          </ul>
-          <ul class="footer__navbar-list">
-            <div class="footer__navbar-label">Company</div>
-            <li class="footer__navbar-item">
-              <a class="footer__navbar-link" href="#">About</a>
-            </li>
-            <li class="footer__navbar-item">
-              <a class="footer__navbar-link" href="#">Team</a>
-            </li>
-            <li class="footer__navbar-item">
-              <a class="footer__navbar-link" href="#">Blog</a>
-            </li>
-            <li class="footer__navbar-item">
-              <a class="footer__navbar-link" href="#">Careers</a>
-            </li>
-          </ul>
-          <ul class="footer__navbar-list">
-            <div class="footer__navbar-label">Connect</div>
-            <li class="footer__navbar-item">
-              <a class="footer__navbar-link" href="#">Contact</a>
-            </li>
-            <li class="footer__navbar-item">
-              <a class="footer__navbar-link" href="#">Newsletter</a>
-            </li>
-            <li class="footer__navbar-item">
-              <a class="footer__navbar-link" href="#">Linkedin</a>
-            </li>
-          </ul>
+          <div class="footer__list-wrapper">
+            <strong class="footer__navbar-label">Product</strong>
+            <ul class="footer__navbar-list">
+              <li class="footer__navbar-item">
+                <a class="footer__navbar-link" href="#">Overview</a>
+              </li>
+              <li class="footer__navbar-item">
+                <a class="footer__navbar-link" href="#">Pricing</a>
+              </li>
+              <li class="footer__navbar-item">
+                <a class="footer__navbar-link" href="#">Marketplace</a>
+              </li>
+              <li class="footer__navbar-item">
+                <a class="footer__navbar-link" href="#">Features</a>
+              </li>
+              <li class="footer__navbar-item">
+                <a class="footer__navbar-link" href="#">Integrations</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__list-wrapper">
+            <strong class="footer__navbar-label">Company</strong>
+            <ul class="footer__navbar-list">
+              <li class="footer__navbar-item">
+                <a class="footer__navbar-link" href="#">About</a>
+              </li>
+              <li class="footer__navbar-item">
+                <a class="footer__navbar-link" href="#">Team</a>
+              </li>
+              <li class="footer__navbar-item">
+                <a class="footer__navbar-link" href="#">Blog</a>
+              </li>
+              <li class="footer__navbar-item">
+                <a class="footer__navbar-link" href="#">Careers</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__list-wrapper">
+            <strong class="footer__navbar-label">Connect</strong>
+            <ul class="footer__navbar-list">
+              <li class="footer__navbar-item">
+                <a class="footer__navbar-link" href="#">Contact</a>
+              </li>
+              <li class="footer__navbar-item">
+                <a class="footer__navbar-link" href="#">Newsletter</a>
+              </li>
+              <li class="footer__navbar-item">
+                <a class="footer__navbar-link" href="#">Linkedin</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
     </footer>

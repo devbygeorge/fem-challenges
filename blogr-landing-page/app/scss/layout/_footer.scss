@@ -18,6 +18,14 @@
     }
   }
 
+  &__list-wrapper {
+    @include mobile() {
+      &:not(:last-child) {
+        margin-bottom: rem(45);
+      }
+    }
+  }
+
   &__navbar {
     @include desktop() {
       display: grid;
@@ -25,19 +33,8 @@
     }
   }
 
-  &__navbar-list {
-    @include mobile() {
-      &:not(:last-child) {
-        margin-bottom: rem(45);
-      }
-    }
-
-    @include desktop() {
-      padding-top: rem(10);
-    }
-  }
-
   &__navbar-label {
+    display: block;
     color: white;
     margin-bottom: rem(35);
 

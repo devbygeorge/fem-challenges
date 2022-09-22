@@ -126,6 +126,10 @@ $navbar-items-space: rem(30);
     position: relative;
     cursor: pointer;
 
+    background-color: transparent;
+    border: none;
+    color: inherit;
+
     &::after {
       content: "";
       width: rem(10);
@@ -147,11 +151,13 @@ $navbar-items-space: rem(30);
       }
     }
 
-    &:hover {
-      text-decoration: underline;
+    @include desktop() {
+      &:hover {
+        text-decoration: underline;
 
-      &::after {
-        transform: translateY(-50%) rotate(180deg);
+        &::after {
+          transform: translateY(-50%) rotate(180deg);
+        }
       }
     }
 
