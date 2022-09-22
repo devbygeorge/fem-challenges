@@ -275,10 +275,6 @@ body {
       min-height: fn.rem(550);
     }
 
-    @include mix.mobile {
-      margin-bottom: fn.rem(5);
-    }
-
     &:nth-child(1) {
       background-image: url("../images/desktop/image-transform.jpg");
     }
