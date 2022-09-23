@@ -4,47 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interactive pricing component</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/main.css" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1>Simple, traffic-based pricing</h1>
-        <p>Sign-up for our 30-day trial. No credit card required.</p>
-      </header>
+    <main>
+      <div class="hero">
+        <img
+          class="hero__pattern"
+          src="images/pattern-circles.svg"
+          alt="pattern circles"
+        />
+        <h1 class="hero__heading">Simple, traffic-based pricing</h1>
+        <p class="hero__paragraph">
+          Sign-up for our 30-day trial. No credit card required.
+        </p>
+      </div>
 
-      <main>
-        <div class="pricing-component">
-          <span class="propose">
-            <span id="propose-value">100K</span> Pageviews</span
-          >
-
-          <div class="slidecontainer">
-            <span class="progress"></span>
-            <input type="range" min="0" max="100" value="50" id="slider" />
-          </div>
-
-          <span class="price"
-            ><span id="price-value">$16.00</span> /
-            <span id="bilingtype">month</span></span
-          >
-
-          <div class="switch">
-            <span>Monthly Billing</span>
-            <button class="btn-switch" id="switchBtn"></button>
-            <span>Yearly Billing 25%</span>
-          </div>
+      <div class="pricing">
+        <div id="js-pricing-pageviews" class="pricing__pageviews">
+          100k pageviews
         </div>
-        <div class="additional-info">
-          <ul>
-            <li>Unlimited websites</li>
-            <li>100% data ownership</li>
-            <li>Email reports</li>
+
+        <div class="pricing__price-selector">
+          <input
+            id="js-pricing-selector"
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+          />
+          <span id="js-pricing-progress-bar"></span>
+        </div>
+
+        <div class="pricing__price-fee">
+          <strong id="js-pricing-fee-value">$16.00</strong>
+          <span id="js-pricing-billing-type">/month</span>
+        </div>
+
+        <div class="pricing__switch-wrapper">
+          <span>Monthly Billing</span>
+          <button id="js-pricing-switch" class="pricing__switch"></button>
+          <span>Yearly Billing 25%</span>
+        </div>
+
+        <footer class="pricing__footer">
+          <ul class="pricing__list">
+            <li class="pricing__item">Unlimited websites</li>
+            <li class="pricing__item">100% data ownership</li>
+            <li class="pricing__item">Email reports</li>
           </ul>
-          <a href="#">Start my trial</a>
-        </div>
-      </main>
-    </div>
-    <script src="main.js"></script>
+          <button class="pricing__button">Start my trial</button>
+        </footer>
+      </div>
+    </main>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

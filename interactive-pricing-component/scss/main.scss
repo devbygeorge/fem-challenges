@@ -1,0 +1,342 @@
+@use "functions" as fn;
+@use "mixins" as mix;
+@use "colors" as c;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font: inherit;
+  line-height: 1;
+}
+
+html {
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  font-family: Manrope, sans-serif;
+}
+
+.hero {
+  background-image: url("../images/bg-pattern.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  min-height: fn.rem(330);
+  padding-top: fn.rem(100);
+  position: relative;
+  text-align: center;
+
+  &__pattern {
+    position: absolute;
+    left: 50%;
+    top: fn.rem(60);
+    transform: translateX(-50%);
+  }
+
+  &__heading {
+    margin-bottom: fn.rem(16);
+
+    font-size: fn.rem(21);
+    font-weight: 800;
+    color: c.$dark-desaturatedblue;
+
+    @include mix.desktop {
+      font-size: fn.rem(27);
+      margin-bottom: fn.rem(18);
+    }
+  }
+
+  &__paragraph {
+    font-size: fn.rem(14);
+    color: c.$grayish-blue;
+  }
+}
+
+.pricing {
+  $padding-mobile-x: 1rem;
+  $padding-mobile-y: 2rem;
+
+  $padding-desktop-x: 4rem;
+  $padding-desktop-y: 3.5rem;
+
+  width: min(fn.rem(600), 100% - 2rem);
+  margin: fn.rem(-100) auto 0;
+  padding: $padding-mobile-y $padding-mobile-x;
+  position: relative;
+
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0px 1rem 2rem 0.5rem #eaeefb;
+  text-align: center;
+
+  font-size: fn.rem(13);
+  color: c.$grayish-blue;
+
+  @include mix.desktop {
+    display: grid;
+    grid-template-areas:
+      "pageviews fee"
+      "selector selector"
+      "switch switch"
+      "footer footer";
+    align-items: center;
+    gap: fn.rem(44);
+
+    padding: $padding-desktop-y $padding-desktop-x;
+  }
+
+  &__pageviews {
+    grid-area: pageviews;
+
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+
+    @include mix.mobile {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__price-fee {
+    grid-area: fee;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+
+    @include mix.mobile {
+      margin-bottom: 2.5rem;
+    }
+
+    strong {
+      font-size: fn.rem(35);
+      font-weight: 800;
+      color: #293356;
+    }
+
+    span {
+      font-size: fn.rem(15);
+    }
+  }
+
+  &__price-selector {
+    grid-area: selector;
+
+    height: fn.rem(9);
+    position: relative;
+
+    @include mix.mobile {
+      margin-bottom: 2.5rem;
+    }
+
+    input {
+      -webkit-appearance: none;
+      appearance: none;
+
+      width: 100%;
+      height: 100%;
+      background: c.$light-grayish-blue;
+      border-radius: 1rem;
+      outline: none;
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+
+        position: relative;
+        z-index: 1;
+
+        width: fn.rem(38);
+        height: fn.rem(38);
+
+        background-color: c.$strong-cyan;
+        background-image: url("../images/icon-slider.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+
+        box-shadow: 0 0 fn.rem(20) fn.rem(3) c.$soft-cyan;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+
+        @include mix.desktop {
+          width: fn.rem(42);
+          height: fn.rem(42);
+        }
+      }
+
+      &::-moz-range-thumb {
+        width: fn.rem(38);
+        height: fn.rem(38);
+
+        position: relative;
+        z-index: 1;
+
+        background-color: c.$strong-cyan;
+        background-image: url("../images/icon-slider.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+
+        box-shadow: 0 0 fn.rem(20) fn.rem(3) c.$soft-cyan;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+
+        @include mix.desktop {
+          width: fn.rem(42);
+          height: fn.rem(42);
+        }
+      }
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      top: fn.rem(2);
+      left: 0;
+
+      width: 50%;
+      height: 100%;
+      background: c.$soft-cyan;
+      border-radius: 1rem;
+    }
+  }
+
+  &__switch-wrapper {
+    grid-area: switch;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+
+    @include mix.mobile {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__switch {
+    position: relative;
+    width: 2.8rem;
+    height: 1.4rem;
+    background: c.$light-grayish-blue;
+
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &::before {
+      content: "";
+      width: 40%;
+      height: 80%;
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      left: 8%;
+      transform: translateY(-50%);
+
+      border-radius: 50%;
+      border: 1px solid c.$pale-blue;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &.active {
+      background-color: c.$soft-cyan;
+
+      &::before {
+        left: calc(100% - 8%);
+        transform: translate(-100%, -50%);
+      }
+    }
+  }
+
+  &__footer {
+    grid-area: footer;
+
+    padding-top: 2rem;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    @include mix.desktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -$padding-mobile-x;
+
+      width: calc(100% + ($padding-mobile-x * 2));
+      height: fn.rem(1);
+      background-color: #eaeefb;
+
+      @include mix.desktop {
+        left: -$padding-desktop-x;
+        width: calc(100% + ($padding-desktop-x * 2));
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    @include mix.desktop {
+      text-align: left;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translate(-200%, -50%);
+
+      width: 0.5rem;
+      height: 0.5rem;
+
+      background-image: url("../images/icon-check.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__button {
+    padding: 0.9rem 2.5rem;
+
+    background: c.$dark-desaturatedblue;
+    color: c.$pale-blue;
+    border-radius: 2rem;
+    transition: 0.3s;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
