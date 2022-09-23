@@ -29,10 +29,8 @@ body {
 }
 
 .hero {
-  background-image: url("../images/bg-pattern.svg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: 0 0;
+  background-color: #f1f5fe;
+  border-bottom-left-radius: 9rem;
 
   min-height: fn.rem(330);
   padding-top: fn.rem(100);
