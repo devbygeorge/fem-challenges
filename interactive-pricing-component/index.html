@@ -33,14 +33,16 @@
         </div>
 
         <div class="pricing__price-selector">
+          <span id="js-pricing-progress-bar"></span>
+
           <input
             id="js-pricing-selector"
             type="range"
             min="0"
             max="100"
             value="50"
+            aria-label="Pricing range selector"
           />
-          <span id="js-pricing-progress-bar"></span>
         </div>
 
         <div class="pricing__price-fee">
@@ -50,7 +52,11 @@
 
         <div class="pricing__switch-wrapper">
           <span>Monthly Billing</span>
-          <button id="js-pricing-switch" class="pricing__switch"></button>
+          <button
+            id="js-pricing-switch"
+            class="pricing__switch"
+            aria-label="Pricing Switch"
+          ></button>
           <span>Yearly Billing 25%</span>
         </div>
 

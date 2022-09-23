@@ -13,10 +13,6 @@
   line-height: 1;
 }
 
-html {
-  height: 100%;
-}
-
 ul {
   list-style: none;
 }
@@ -29,12 +25,14 @@ button {
 
 body {
   font-family: Manrope, sans-serif;
+  padding-bottom: 3rem;
 }
 
 .hero {
   background-image: url("../images/bg-pattern.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  background-position: 0 0;
 
   min-height: fn.rem(330);
   padding-top: fn.rem(100);
@@ -145,22 +143,30 @@ body {
       margin-bottom: 2.5rem;
     }
 
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: c.$light-grayish-blue;
+      border-radius: 1rem;
+    }
+
     input {
       -webkit-appearance: none;
       appearance: none;
 
       width: 100%;
       height: 100%;
-      background: c.$light-grayish-blue;
+      background: transparent;
+      position: relative;
+
       border-radius: 1rem;
       outline: none;
 
-      &::-webkit-slider-thumb {
+      @mixin slider-thumb {
         -webkit-appearance: none;
         appearance: none;
-
-        position: relative;
-        z-index: 1;
 
         width: fn.rem(38);
         height: fn.rem(38);
@@ -181,34 +187,19 @@ body {
         }
       }
 
+      &::-webkit-slider-thumb {
+        @include slider-thumb;
+      }
+
       &::-moz-range-thumb {
-        width: fn.rem(38);
-        height: fn.rem(38);
-
-        position: relative;
-        z-index: 1;
-
-        background-color: c.$strong-cyan;
-        background-image: url("../images/icon-slider.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-
-        box-shadow: 0 0 fn.rem(20) fn.rem(3) c.$soft-cyan;
-        border-radius: 50%;
-        border: none;
-        cursor: pointer;
-
-        @include mix.desktop {
-          width: fn.rem(42);
-          height: fn.rem(42);
-        }
+        @include slider-thumb;
       }
     }
 
     span {
       display: block;
       position: absolute;
-      top: fn.rem(2);
+      top: 0;
       left: 0;
 
       width: 50%;
