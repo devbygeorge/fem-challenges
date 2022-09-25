@@ -1,0 +1,8 @@
+@use "style/mixins" as mix;
+
+.header {
+  padding: 1.2rem 0;
+
+  background: var(--color-bg-accent);
+  box-shadow: 0 3px 5px var(--color-shadow);
+}

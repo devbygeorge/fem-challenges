@@ -1,0 +1,58 @@
+@use "style/mixins" as mix;
+@use "style/functions" as fn;
+
+.select {
+  min-width: fn.rem(200);
+  position: relative;
+  cursor: pointer;
+
+  @include mix.mobile {
+    width: 100%;
+  }
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: fn.rem(45);
+    padding: 0 1rem;
+    background: var(--color-bg-accent);
+
+    font-size: fn.rem(15);
+    box-shadow: 0 0 5px var(--color-shadow);
+    border-radius: fn.rem(6);
+
+    @include mix.mobile {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 3.125rem;
+
+    width: 100%;
+    background: var(--color-bg-accent);
+    box-shadow: 0 0 5px var(--color-shadow);
+    border-radius: fn.rem(6);
+
+    transition: 0.3s;
+    visibility: hidden;
+    opacity: 0;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__item {
+    padding: 0.6rem;
+
+    &:hover {
+      background: var(--color-shadow);
+    }
+  }
+}

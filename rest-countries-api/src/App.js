@@ -1,30 +1,85 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { Switch, Route } from "react-router-dom";
+/* utilities import */
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { useState } from "react";
 
-import Header from './components/Header';
-import Countries from './components/Countries';
-import Country from './components/Country';
+import { fetchCountries } from "util/fetchData";
+import { useState, useEffect } from "react";
 
+// /* global styles import */
+import "style/main.scss";
 
-const mapStateToProps = props => ({
-  theme: props.theme
-});
+/* page & layout imports */
+import Header from "component/Header";
+import Homepage from "route/Homepage";
+import Innerpage from "route/Innerpage";
 
-class App extends React.Component {
-  render() {
-    
-    return (
-      <div className={`background ${this.props.theme}`}>
-        <Header />
+function App() {
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
-        <Switch>
-          <Route exact path="/" children={<Countries />} />
-          <Route exact path="/:country" children={<Country />} />
-        </Switch>
+  const changeTheme = () => {
+    setTheme((theme) => (theme === "light" ? "dark" : "light"));
+    localStorage.setItem("theme", theme === "light" ? "dark" : "light");
+  };
+
+  /*---------- temporary storage ---------*/
+  const [originalData, setOriginalData] = useState(null);
+  const [filteredData, setFilteredData] = useState(null);
+  const [filterParams, setFilterParams] = useState({
+    region: "",
+    name: "",
+  });
+
+  const cleanFilterParams = () => {
+    setFilterParams({
+      region: "",
+      name: "",
+    });
+  };
+
+  useEffect(() => {
+    if (!originalData) {
+      fetchCountries().then((response) => {
+        setOriginalData(response.data);
+        setFilteredData(response.data);
+      });
+    } else {
+      setFilteredData(() => {
+        return originalData.filter(
+          (country) =>
+            country.name.common.toLowerCase().includes(filterParams.name) &&
+            country.region.includes(filterParams.region)
+        );
+      });
+    }
+  }, [filterParams, originalData]);
+  /* ----------------------------------------- */
+
+  return (
+    <Router>
+      <div className={"app " + theme}>
+        <Header
+          theme={theme}
+          changeTheme={changeTheme}
+          cleanFilterParams={cleanFilterParams}
+        />
+        <main className="main">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Homepage
+                  filterParams={filterParams}
+                  setFilterParams={setFilterParams}
+                  filteredData={filteredData}
+                />
+              }
+            />
+            <Route path="/:countryCode" element={<Innerpage />} />
+          </Routes>
+        </main>
       </div>
-    );
-  }
+    </Router>
+  );
 }
 
-export default connect(mapStateToProps)(App);
+export default App;

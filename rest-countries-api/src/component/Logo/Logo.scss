@@ -1,0 +1,11 @@
+@use "style/mixins" as mix;
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1;
+
+  @include mix.mobile {
+    font-size: 1.1rem;
+  }
+}
