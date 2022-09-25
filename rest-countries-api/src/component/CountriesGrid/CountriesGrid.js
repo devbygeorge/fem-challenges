@@ -16,7 +16,6 @@ function CountriesGrid({ data }) {
               <img
                 src={country.flags.png}
                 alt={country.name.common}
-                loading="lazy"
                 className="country__img"
               />
             </div>
