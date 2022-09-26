@@ -3,12 +3,12 @@ import ThemeToggle from "component/ThemeToggle";
 
 import "./Header.scss";
 
-function Header({ theme, changeTheme, cleanFilterParams }) {
+function Header() {
   return (
     <header className="header">
       <div className="container flex">
-        <Logo cleanFilterParams={cleanFilterParams} />
-        <ThemeToggle theme={theme} changeTheme={changeTheme} />
+        <Logo />
+        <ThemeToggle />
       </div>
     </header>
   );

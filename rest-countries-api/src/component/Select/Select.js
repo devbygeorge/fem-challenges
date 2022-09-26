@@ -1,15 +1,20 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import FilterContext from "context/FilterContext";
+
 import "./Select.scss";
 
-function Select({ filterParams, setFilterParams }) {
+const regions = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
+
+function Select() {
   const [active, setActive] = useState(false);
+  const { params, setParams } = useContext(FilterContext);
 
   const toggleActive = () => {
     setActive((active) => !active);
   };
 
   const changeRegion = (e) => {
-    setFilterParams((params) => {
+    setParams((params) => {
       return {
         region: e.target.textContent,
         name: params.name,
@@ -20,25 +25,15 @@ function Select({ filterParams, setFilterParams }) {
   return (
     <div onClick={toggleActive} className="select">
       <div className="select__label">
-        <span>{filterParams.region || "Filter by region"}</span>
+        <span>{params.region || "Filter by region"}</span>
         <i className={`far fa-angle-${active ? "up" : "down"}`}></i>
       </div>
-      <ul className={`select__list ${active && "active"}`}>
-        <li onClick={changeRegion} className="select__item">
-          Africa
-        </li>
-        <li onClick={changeRegion} className="select__item">
-          Americas
-        </li>
-        <li onClick={changeRegion} className="select__item">
-          Asia
-        </li>
-        <li onClick={changeRegion} className="select__item">
-          Europe
-        </li>
-        <li onClick={changeRegion} className="select__item">
-          Oceania
-        </li>
+      <ul className={`select__list ${active ? "active" : ""}`}>
+        {regions.map((region) => (
+          <li key={region} onClick={changeRegion} className="select__item">
+            {region}
+          </li>
+        ))}
       </ul>
     </div>
   );

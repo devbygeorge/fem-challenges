@@ -21,7 +21,7 @@
     background: var(--color-bg-accent);
 
     font-size: fn.rem(15);
-    box-shadow: 0 0 5px var(--color-shadow);
+    box-shadow: 0 3px 5px var(--color-shadow);
     border-radius: fn.rem(6);
 
     @include mix.mobile {

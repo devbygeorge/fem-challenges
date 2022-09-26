@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import CountriesContext from "context/CountriesContext";
 
 import "./CountriesGrid.scss";
 
-function CountriesGrid({ data }) {
+function CountriesGrid() {
+  const { data } = useContext(CountriesContext);
+
   if (data === null) {
     return <div className="preloader"></div>;
   }

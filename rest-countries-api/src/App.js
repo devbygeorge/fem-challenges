@@ -1,9 +1,9 @@
-/* utilities import */
+/* react utilities import */
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import { useState } from "react";
+import { useContext } from "react";
 
-import { fetchCountries } from "util/fetchData";
-import { useState, useEffect } from "react";
+/* util & context import */
+import ThemeContext from "context/ThemeContext";
 
 // /* global styles import */
 import "style/main.scss";
@@ -14,71 +14,18 @@ import Homepage from "route/Homepage";
 import Innerpage from "route/Innerpage";
 
 function App() {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-
-  const changeTheme = () => {
-    setTheme((theme) => (theme === "light" ? "dark" : "light"));
-    localStorage.setItem("theme", theme === "light" ? "dark" : "light");
-  };
-
-  /*---------- temporary storage ---------*/
-  const [originalData, setOriginalData] = useState(null);
-  const [filteredData, setFilteredData] = useState(null);
-  const [filterParams, setFilterParams] = useState({
-    region: "",
-    name: "",
-  });
-
-  const cleanFilterParams = () => {
-    setFilterParams({
-      region: "",
-      name: "",
-    });
-  };
-
-  useEffect(() => {
-    if (!originalData) {
-      fetchCountries().then((response) => {
-        setOriginalData(response.data);
-        setFilteredData(response.data);
-      });
-    } else {
-      setFilteredData(() => {
-        return originalData.filter(
-          (country) =>
-            country.name.common.toLowerCase().includes(filterParams.name) &&
-            country.region.includes(filterParams.region)
-        );
-      });
-    }
-  }, [filterParams, originalData]);
-  /* ----------------------------------------- */
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <Router>
-      <div className={"app " + theme}>
-        <Header
-          theme={theme}
-          changeTheme={changeTheme}
-          cleanFilterParams={cleanFilterParams}
-        />
-        <main className="main">
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <Homepage
-                  filterParams={filterParams}
-                  setFilterParams={setFilterParams}
-                  filteredData={filteredData}
-                />
-              }
-            />
-            <Route path="/:countryCode" element={<Innerpage />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
+    <div className={"app " + theme}>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/:countryCode" element={<Innerpage />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
