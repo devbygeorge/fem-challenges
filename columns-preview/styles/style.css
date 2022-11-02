@@ -18,87 +18,83 @@ a {
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 2rem;
 }
 
-.cards {
-  max-width: 1000px;
-  display: flex;
-  border-radius: 16px;
+.columns-wrapper {
+  max-width: 31rem;
+  border-radius: 2rem;
   overflow: hidden;
 }
 
-.card {
+.column {
   font-family: Lexend Deca, sans-serif;
-  padding: 64px;
+  padding: 2.625rem;
 }
 
-.card--orange {
+.column--orange {
   background: hsl(31, 77%, 52%);
   color: hsl(31, 77%, 52%);
 }
 
-.card--cyan {
+.column--cyan {
   background: hsl(184, 100%, 22%);
   color: hsl(184, 100%, 22%);
 }
 
-.card--dark-cyan {
+.column--dark-cyan {
   background: hsl(179, 100%, 13%);
   color: hsl(179, 100%, 13%);
 }
 
-.card img {
-  margin-bottom: 24px;
+.column img {
+  margin-bottom: 1.5rem;
 }
 
-.card h2 {
+.column h2 {
+  margin-bottom: 1.5rem;
   font-family: Big Shoulders Display, sans-serif;
   font-size: 2.5rem;
   color: hsl(0, 0%, 95%);
   text-transform: uppercase;
-  margin-bottom: 24px;
 }
 
-.card p {
-  font-size: 15px;
+.column p {
+  margin-bottom: 1.8rem;
+  font-size: 0.9325rem;
   line-height: 1.5rem;
-  margin-bottom: 90px;
   color: hsla(0, 0%, 100%, 0.75);
 }
 
-.card a {
-  background-color: hsl(0, 0%, 95%);
-  padding: 14px 30px;
-  border-radius: 32px;
+.column a {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: hsl(0, 0%, 95%);
+  border: 2px solid transparent;
+  border-radius: 2rem;
 }
 
-.card a:hover {
+.column a:hover {
   background-color: inherit;
   color: hsl(0, 0%, 95%);
-  border: 2px solid hsl(0, 0%, 95%);
+  border-color: hsl(0, 0%, 95%);
 }
 
-@media (max-width: 1000px) {
-  body {
-    height: 100%;
-    padding: 64px 12px;
+@media (min-width: 62em) {
+  .columns-wrapper {
+    display: flex;
+    max-width: 62rem;
   }
 
-  .cards {
-    flex-direction: column;
-    max-width: 500px;
+  .column p {
+    margin-bottom: 5rem;
   }
 
-  .cards p {
-    margin-bottom: 50px;
-  }
-
-  .card {
-    padding: 42px;
+  .column {
+    padding: 4rem;
   }
 }
 
