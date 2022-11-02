@@ -8,40 +8,47 @@
 }
 
 body {
+  display: grid;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+
+  background-color: hsl(185, 75%, 39%);
+  background-image: url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: right 50vw bottom 50vh, 50vw 50vh;
+
   font-family: Kumbh Sans, sans-serif;
   font-weight: 700;
   color: hsl(229, 23%, 23%);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-
-  background: url("../images/bg-pattern-top.svg") no-repeat right 50vw bottom
-      50vh,
-    url("../images/bg-pattern-bottom.svg") no-repeat 50vw 50vh,
-    hsl(185, 75%, 39%);
 }
 
 .card {
-  width: 350px;
-  border-radius: 16px;
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 100px hsl(186, 61%, 37%);
+  width: min(21.75rem, 100%);
+  margin-inline: auto;
+
+  background-color: white;
+  background-image: url("../images/bg-pattern-card.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 5.5rem;
+
+  box-shadow: 0 0 6rem hsl(186, 61%, 37%);
+  border-radius: 1rem;
   text-align: center;
+  overflow: hidden;
 }
 
-.card__image {
-  border: 5px solid white;
+.card__avatar {
+  border: 0.3125rem solid white;
   border-radius: 50%;
-  margin-top: -55px;
-  margin: -55px 0 10px;
+  margin-bottom: 0.625rem;
 }
 
 .card__name {
   font-size: 1.2rem;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .card__age {
@@ -52,22 +59,21 @@ body {
 .card__country {
   font-weight: 400;
   color: hsl(227, 10%, 46%);
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .card__list {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid hsl(0, 0%, 87%);
-  padding: 24px 48px;
+  padding: 1.5rem 3rem;
 }
 
 .card__item {
-  font-size: 1.1rem;
-
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  font-size: 1.1rem;
+  gap: 0.19rem;
 }
 
 .card__item span {
