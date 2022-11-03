@@ -3,183 +3,199 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
 }
 
 body {
+  display: flex;
+  justify-content: center;
+
+  min-height: 100vh;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  padding: 1rem;
+
   font-family: Kumbh Sans, sans-serif;
   font-weight: 400;
   font-size: 0.75rem;
-
   color: hsl(238, 29%, 16%);
-  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  min-height: 100vh;
-  padding: 16px;
 }
 
-.card {
-  width: 900px;
-  display: flex;
+.accordion {
+  max-width: 23.44rem;
+  position: relative;
+  margin-top: 7.5rem;
+
   background: white;
-  border-radius: 16px;
+  border-radius: 1rem;
+}
+
+.accordion__images-wrapper {
   position: relative;
 }
 
-.card__images {
-  width: 50%;
-  position: relative;
-  overflow: hidden;
-}
-
-.card__box {
+.accordion__bg-pattern {
   position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(-50%, -25%);
+  top: -0.05rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 15rem;
+  height: 6.5rem;
+
+  background-image: url("../images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.card__woman {
+.accordion__illustration-woman {
   position: absolute;
-  left: -80px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: -6.65rem;
+  left: 50%;
+  transform: translateX(-55%);
+
+  width: 16.63rem;
+  height: 12.25rem;
+
+  background-image: url("../images/illustration-woman-online-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.card__pattern {
-  position: absolute;
-  left: -575px;
-  top: 50%;
-  transform: translateY(-57.5%);
+.accordion__content {
+  padding: 7.75rem 1.25rem 1.25rem;
 }
 
-.card__woman--mobile,
-.card__pattern--mobile {
-  display: none;
-}
-
-.card__faq {
-  width: 50%;
-  padding: 80px 80px 80px 0;
-}
-
-.card__heading {
+.accordion__heading {
+  margin-bottom: 0.5rem;
   font-size: 2rem;
-  margin-bottom: 8px;
+  text-align: center;
 }
 
-.card__item {
+.accordion__item {
   border-bottom: 1px solid hsl(240, 5%, 91%);
-  padding: 16px 0 8px;
+  padding: 1rem 0 0.5rem;
 }
 
-.card__title {
+.accordion__title {
+  position: relative;
   width: 95%;
-  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+
+  font-size: 0.85rem;
   font-weight: 400;
   color: hsl(237, 12%, 33%);
-  margin-bottom: 0.5rem;
   cursor: pointer;
-  position: relative;
 }
 
-.card__title::after {
+.accordion__title::after {
   content: "";
   position: absolute;
-  right: -17px;
-  top: 5px;
-  width: 10px;
-  height: 8px;
+  right: -1.1rem;
+
+  top: 0.3125rem;
+  width: 0.625rem;
+  height: 0.5rem;
   background: url("../images/icon-arrow-down.svg") no-repeat;
   transition: all linear 0.1s;
 }
 
-.card__title:hover {
+.accordion__title:hover {
   color: hsl(14, 88%, 65%);
 }
 
-.card__paragraph {
-  color: hsl(240, 6%, 50%);
+.accordion__paragraph {
+  padding-right: 1.5rem;
   line-height: 1.2rem;
-  max-height: 0px;
+  color: hsl(240, 6%, 50%);
+
+  max-height: 0;
   opacity: 0;
   transition: all 0.2s ease-in-out;
 }
 
-.show .card__title {
+.show .accordion__title {
   font-weight: 700;
 }
 
-.show .card__title::after {
+.show .accordion__title::after {
   transform: rotate(180deg);
 }
 
-.show .card__paragraph {
-  max-height: 100px;
+.show .accordion__paragraph {
+  max-height: 6.25rem;
   opacity: 1;
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 62em) {
   body {
-    align-items: flex-start;
+    align-items: center;
   }
 
-  .card {
-    margin-top: 120px;
-    width: 375px;
-    flex-direction: column;
+  .accordion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    max-width: 56.25rem;
+    margin-top: 0;
   }
 
-  .card__woman,
-  .card__pattern,
-  .card__box {
-    display: none;
+  .accordion__images-wrapper {
+    overflow: hidden;
   }
 
-  .card__images {
-    width: auto;
-    height: 210px;
-    margin-top: -106px;
-  }
-
-  .card__woman--mobile {
-    display: block;
+  .accordion__illustration-box {
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-55%);
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -25%);
+    z-index: 1;
+
+    width: 11.88rem;
+    height: 11.5rem;
+
+    background-image: url("../images/illustration-box-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
-  .card__pattern--mobile {
-    display: block;
-    position: absolute;
+  .accordion__bg-pattern {
+    top: 50%;
+    left: 0;
+    transform: translate(-59.5%, -57.5%);
+
+    width: 966px;
+    height: 945px;
+
+    background-image: url("../images/bg-pattern-desktop.svg");
+  }
+
+  .accordion__illustration-woman {
     top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-64.6%, -50%);
+
+    width: 472px;
+    height: 359px;
+
+    background-image: url("../images/illustration-woman-online-desktop.svg");
   }
 
-  .card__faq {
-    width: 100%;
-    padding: 20px;
+  .accordion__content {
+    padding: 5rem 5rem 5rem 0;
   }
 
-  .card__heading {
-    text-align: center;
+  .accordion__heading {
+    text-align: left;
   }
 
-  .card__title {
-    font-size: 0.85rem;
-  }
-
-  .card__paragraph {
-    padding-right: 1.5rem;
+  .accordion__title {
+    font-size: 0.9rem;
   }
 }
