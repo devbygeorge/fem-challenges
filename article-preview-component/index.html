@@ -3,60 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Article preview component</title>
   </head>
   <body>
     <main>
       <h1 class="visually-hidden">Article preview component</h1>
-      <article class="preview">
-        <img class="preview__image" src="./images/drawers.jpg" alt="drawers" />
-        <div class="preview__wrapper">
-          <h2>
+      <div class="article-preview">
+        <div class="article-preview__img">
+          <img src="./images/drawers.jpg" alt="drawers" />
+        </div>
+        <div class="article-preview__content">
+          <h2 class="article-preview__title">
             Shift the overall look and feel by adding these wonderful touches to
             furniture in your home
           </h2>
-          <p>
+          <p class="article-preview__paragraph">
             Ever been in a room and felt like something was missing? Perhaps it
             felt slightly bare and uninviting. I’ve got some simple tips to help
             you make any room feel complete.
           </p>
-          <div class="preview__user">
-            <img
-              class="preview__picture"
-              src="images/avatar-michelle.jpg"
-              alt="avatar michelle"
-            />
 
-            <div class="preview__flex-grow">
-              <h3 class="preview__username">Michelle Appleton</h3>
-              <span class="preview__date">28 Jun 2020</span>
+          <div class="article-preview__user-details">
+            <div class="article-preview__avatar">
+              <img src="images/avatar-michelle.jpg" alt="avatar michelle" />
             </div>
-
-            <img
-              class="preview__share"
-              src="images/icon-share.svg"
-              alt="share"
-            />
-
-            <ul class="preview__socials">
-              <li><a href="#">Share</a></li>
-              <li>
-                <a href="#"><img src="images/icon-facebook.svg" alt="fb" /></a>
-              </li>
-              <li>
-                <a href="#"><img src="images/icon-twitter.svg" alt="twit" /></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img src="images/icon-pinterest.svg" alt="pint"
-                /></a>
-              </li>
-            </ul>
+            <span class="article-preview__username">Michelle Appleton</span>
+            <span class="article-preview__date">28 Jun 2020</span>
+            <button class="article-preview__share-button">
+              <img src="images/icon-share.svg" alt="share" />
+            </button>
+          </div>
+          <div class="article-preview__user-socials">
+            <a href="#">Share</a>
+            <a href="https://facebook.com" target="_blank">
+              <img src="images/icon-facebook.svg" alt="fb" />
+            </a>
+            <a href="https://twitter.com" target="_blank">
+              <img src="images/icon-twitter.svg" alt="twit" />
+            </a>
+            <a href="https://pinterest.com" target="_blank">
+              <img src="images/icon-pinterest.svg" alt="pint" />
+            </a>
           </div>
         </div>
-      </article>
+      </div>
     </main>
-    <script src="./js/index.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
