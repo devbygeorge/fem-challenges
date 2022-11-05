@@ -1,5 +1,5 @@
-const form = document.querySelector("#form");
-const messageArea = document.querySelector("#message");
+const form = document.querySelector("#hero-form-js");
+const messageArea = document.querySelector("#hero-message-js");
 const regexp =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
