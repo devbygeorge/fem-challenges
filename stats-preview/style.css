@@ -1,10 +1,18 @@
+/* import fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
 
+/* reset css */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
 a {
@@ -19,112 +27,130 @@ li {
 }
 
 img {
-  width: 100%;
-  height: 100%;
+  display: block;
+  max-width: 100%;
   object-fit: cover;
 }
 
+/* general styles */
 body {
   display: grid;
   place-items: center;
-
-  min-height: 100vh;
   background: hsl(233, 47%, 7%);
-  padding: 1.5rem;
 
   font-family: Inter, sans-serif;
-  font-size: 0.9325rem;
   color: white;
 }
 
+/* card styles */
 .card {
-  max-width: 26rem;
+  margin: 1.5rem;
   background: hsl(244, 38%, 16%);
-  border-radius: 2.25rem;
+  border-radius: 0.5rem;
   overflow: hidden;
 }
 
-.card__image {
+.card__img {
   position: relative;
-  aspect-ratio: 6/5;
 }
 
-.card__image::after {
+.card__img::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: hsla(277, 71%, 36%, 0.4);
+  background: hsla(277, 86%, 27%, 0.6);
 }
 
-.card__text {
+.card__content {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  padding: 2rem;
+  gap: 1.5rem;
+  padding: 3rem 2rem;
+  text-align: center;
 }
 
-.card__heading {
-  font-size: 1.5rem;
+.card__title {
+  font-size: 2rem;
 }
 
-.card__heading span {
+.card__title span {
   color: hsl(277, 64%, 61%);
 }
 
 .card__paragraph {
-  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.075rem;
+  line-height: 2rem;
   color: hsla(0, 0%, 100%, 0.75);
 }
 
-.card__list {
+.card__stats {
   display: flex;
   flex-direction: column;
-  gap: 0.625rem;
+  gap: 2rem;
 }
 
-.card__item {
+.card__stat {
   display: flex;
   flex-direction: column;
+  gap: 0.25rem;
 
   font-family: Lexend Deca, sans-serif;
+  font-size: 0.975rem;
   color: hsla(0, 0%, 100%, 0.6);
   text-transform: uppercase;
 }
 
-.card__item span {
+.card__stat span {
   font-family: Inter, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: white;
 }
 
-@media (min-width: 68em) {
+/* on desktop screen */
+@media (min-width: 640px) {
   .card {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 62.5rem;
+    max-width: 62rem;
   }
 
-  .card__image {
+  .card__img {
     order: 1;
-    aspect-ratio: unset;
   }
 
-  .card__text {
-    padding: 3.125rem;
+  .card__img img {
+    height: 100%;
   }
 
-  .card__heading {
-    font-size: 1.875rem;
+  .card__content {
+    padding: 3.5rem;
+    text-align: left;
   }
 
-  .card__list {
+  .card__title {
+    font-size: 2rem;
+  }
+
+  .card__paragraph {
+    max-width: 22rem;
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    line-height: 1.8;
+  }
+
+  .card__stats {
     margin-top: auto;
     flex-direction: row;
-    gap: 3rem;
+    gap: 3.25rem;
   }
 
-  .card__item span {
-    font-size: 1.5rem;
+  .card__stat {
+    font-size: 0.8rem;
+  }
+
+  .card__stat span {
+    font-size: 1.35rem;
   }
 }

@@ -4,29 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stats preview card component</title>
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
-      <div class="card">
-        <div class="card__image">
-          <img src="images/image-header-desktop.jpg" alt="People working" />
+      <article class="card">
+        <div class="card__img">
+          <picture>
+            <source
+              srcset="images/image-header-desktop.jpg"
+              media="(min-width: 640px)"
+            />
+            <img src="images/image-header-mobile.jpg" alt="People working" />
+          </picture>
         </div>
-        <div class="card__text">
-          <h1 class="card__heading">
+        <div class="card__content">
+          <h1 class="card__title">
             Get <span>insights</span> that help your business grow.
           </h1>
           <p class="card__paragraph">
             Discover the benefits of data analytics and make better decisions
             regarding revenue, customer experience, and overall efficiency.
           </p>
-          <ul class="card__list">
-            <li class="card__item"><span>10k+</span> companies</li>
-            <li class="card__item"><span>314</span> templates</li>
-            <li class="card__item"><span>12m+</span> queries</li>
+          <ul class="card__stats">
+            <li class="card__stat"><span>10k+</span> companies</li>
+            <li class="card__stat"><span>314</span> templates</li>
+            <li class="card__stat"><span>12m+</span> queries</li>
           </ul>
         </div>
-      </div>
+      </article>
     </main>
   </body>
 </html>
