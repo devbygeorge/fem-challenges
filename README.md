@@ -20,4 +20,4 @@ Here are some of the front-end projects that I've built to improve my coding ski
 | 14 | sunnyside landing page | HTML, SCSS, JS | [Code](https://github.com/GiorgiPasieshvili/fem-challenges/tree/main/sunnyside-landing-page) | [Demo](https://giorgipasieshvili.github.io/fem-challenges/sunnyside-landing-page/) |
 | 15 | crowdfunding product page | HTML, SCSS, JS | [Code](https://github.com/GiorgiPasieshvili/fem-challenges/tree/main/crowdfunding-product-page) | [Demo](https://giorgipasieshvili.github.io/fem-challenges/crowdfunding-product-page/) |
 | 16 | interactive pricing component | HTML, SCSS, JS | [Code](https://github.com/GiorgiPasieshvili/fem-challenges/tree/main/interactive-pricing-component) | [Demo](https://giorgipasieshvili.github.io/fem-challenges/interactive-pricing-component/) |
-| 17 | rest countries api | React, SCSS, Axios | [Code](https://github.com/GiorgiPasieshvili/fem-challenges/tree/main/rest-countries-api) | [Demo](#) |
+| 17 | rest countries api | React, SCSS, Axios | [Code](https://github.com/GiorgiPasieshvili/fem-challenges/tree/main/rest-countries-api) | [Demo](https://fem-challenges-rest-countries-api.netlify.app/) |
