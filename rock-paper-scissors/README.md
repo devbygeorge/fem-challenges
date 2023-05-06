@@ -4,4 +4,4 @@ Your Rock Paper Scissors web app built with Vue.js allows users to play the clas
 
 Technologies used: TypeScript, Vue, Pinia, Sass.
 
-To see a demo, click [here]().
+To see a demo, click [here](https://fem-challenges-rock-paper-scissors.netlify.app/).
