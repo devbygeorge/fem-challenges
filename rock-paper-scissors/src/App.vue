@@ -21,8 +21,9 @@ export default {
     }
   },
   methods: {
-    setPicked(value: String) {
+    setPicked(value: string) {
       this.isPickMode = false
+      this.gameResult = ''
       const arr = ['paper', 'scissors', 'rock']
       const randomIndex = Math.floor(Math.random() * arr.length)
       const randomPick = arr[randomIndex]
@@ -32,7 +33,7 @@ export default {
         this.aiPicked = randomPick
 
         if (value === randomPick) {
-          this.gameResult = 'it is tie'
+          this.gameResult = 'draw'
         } else if (
           (value === 'rock' && randomPick === 'scissors') ||
           (value === 'paper' && randomPick === 'rock') ||
