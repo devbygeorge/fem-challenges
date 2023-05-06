@@ -4,4 +4,4 @@ Blogr is a modern publishing platform that offers an intuitive content editor wi
 
 Technologies used: HTML, SCSS, JS.
 
-To see a demo, click [here](https://giorgipasieshvili.github.io/fem-challenges/blogr-landing-page/).
+To see a demo, click [here](https://devbygeorge.github.io/fem-challenges/blogr-landing-page/).

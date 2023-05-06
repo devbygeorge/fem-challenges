@@ -4,4 +4,4 @@ This is a Stats Preview component that showcases three statistics using a split-
 
 Technologies used: HTML, CSS.
 
-To see a demo, click [here](https://giorgipasieshvili.github.io/fem-challenges/stats-preview/).
+To see a demo, click [here](https://devbygeorge.github.io/fem-challenges/stats-preview/).

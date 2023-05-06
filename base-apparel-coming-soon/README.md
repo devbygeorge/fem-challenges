@@ -4,4 +4,4 @@ This project is the responsive landing page for a fashion company that is launch
 
 Technologies used: HTML, CSS, JS.
 
-To see a demo, click [here](https://giorgipasieshvili.github.io/fem-challenges/base-apparel-coming-soon/).
+To see a demo, click [here](https://devbygeorge.github.io/fem-challenges/base-apparel-coming-soon/).

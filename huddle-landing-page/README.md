@@ -4,4 +4,4 @@ Huddle is a platform that changes the way communities are built. It allows users
 
 Technologies used: HTML, SCSS.
 
-To see a demo, click [here](https://giorgipasieshvili.github.io/fem-challenges/huddle-landing-page/).
+To see a demo, click [here](https://devbygeorge.github.io/fem-challenges/huddle-landing-page/).

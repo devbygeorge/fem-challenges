@@ -4,4 +4,4 @@ This is a single-price grid component that displays a subscription plan at a fix
 
 Technologies used: HTML, SCSS.
 
-To see a demo, click [here](https://giorgipasieshvili.github.io/fem-challenges/single-price-grid/).
+To see a demo, click [here](https://devbygeorge.github.io/fem-challenges/single-price-grid/).

@@ -4,4 +4,4 @@ Mastercraft Bamboo Monitor Riser is a stylish platform that elevates your monito
 
 Technologies used: HTML, SCSS, JS.
 
-To see a demo, click [here](https://giorgipasieshvili.github.io/fem-challenges/crowdfunding-product-page/).
+To see a demo, click [here](https://devbygeorge.github.io/fem-challenges/crowdfunding-product-page/).

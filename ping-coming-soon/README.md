@@ -4,4 +4,4 @@ Ping is a website that is launching soon and offers a subscription service to no
 
 Technologies used: HTML, SCSS, JS.
 
-To see a demo, click [here](https://giorgipasieshvili.github.io/fem-challenges/ping-coming-soon/).
+To see a demo, click [here](https://devbygeorge.github.io/fem-challenges/ping-coming-soon/).

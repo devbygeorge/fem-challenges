@@ -4,4 +4,4 @@ Sunnyside is a creative agency that helps brands grow through compelling visuals
 
 Technologies used: HTML, SCSS, JS.
 
-To see a demo, click [here](https://giorgipasieshvili.github.io/fem-challenges/sunnyside-landing-page/).
+To see a demo, click [here](https://devbygeorge.github.io/fem-challenges/sunnyside-landing-page/).

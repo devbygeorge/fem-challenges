@@ -4,4 +4,4 @@ This is a sign-up form challenge that features a clean and modern design with a 
 
 Technologies used: HTML, SCSS, JS.
 
-To see a demo, click [here](https://giorgipasieshvili.github.io/fem-challenges/signup-form/).
+To see a demo, click [here](https://devbygeorge.github.io/fem-challenges/signup-form/).

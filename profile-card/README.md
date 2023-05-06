@@ -4,4 +4,4 @@ This is a profile card component that displays the name, age, location, number o
 
 Technologies used: HTML, CSS.
 
-To see a demo, click [here](https://giorgipasieshvili.github.io/fem-challenges/profile-card/).
+To see a demo, click [here](https://devbygeorge.github.io/fem-challenges/profile-card/).

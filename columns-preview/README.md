@@ -4,4 +4,4 @@ This is a preview of three different car categories: Sedans, SUVs, and Luxury ca
 
 Technologies used: HTML, CSS.
 
-To see a demo, click [here](https://giorgipasieshvili.github.io/fem-challenges/columns-preview/).
+To see a demo, click [here](https://devbygeorge.github.io/fem-challenges/columns-preview/).

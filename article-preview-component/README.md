@@ -4,4 +4,4 @@ This project is a responsive article preview card that showcases an article imag
 
 Technologies used: HTML, CSS, JS.
 
-To see a demo, click [here](https://giorgipasieshvili.github.io/fem-challenges/article-preview-component/).
+To see a demo, click [here](https://devbygeorge.github.io/fem-challenges/article-preview-component/).

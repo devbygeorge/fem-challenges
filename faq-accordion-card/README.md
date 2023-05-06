@@ -4,4 +4,4 @@ The FAQ section provides answers to common questions about the service, includin
 
 Technologies used: HTML, CSS, JS.
 
-To see a demo, click [here](https://giorgipasieshvili.github.io/fem-challenges/faq-accordion-card/).
+To see a demo, click [here](https://devbygeorge.github.io/fem-challenges/faq-accordion-card/).

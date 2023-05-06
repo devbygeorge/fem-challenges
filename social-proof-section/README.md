@@ -4,4 +4,4 @@ This is a social proof section that displays customer reviews and ratings. It al
 
 Technologies used: HTML, CSS.
 
-To see a demo, click [here](https://giorgipasieshvili.github.io/fem-challenges/social-proof-section/).
+To see a demo, click [here](https://devbygeorge.github.io/fem-challenges/social-proof-section/).

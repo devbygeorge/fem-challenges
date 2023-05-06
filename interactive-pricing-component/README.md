@@ -4,4 +4,4 @@ Traffic-based pricing with a 30-day trial and no credit card required. Starts at
 
 Technologies used: HTML, SCSS, JS.
 
-To see a demo, click [here](https://giorgipasieshvili.github.io/fem-challenges/interactive-pricing-component/).
+To see a demo, click [here](https://devbygeorge.github.io/fem-challenges/interactive-pricing-component/).
