@@ -6,8 +6,8 @@
   let customTip = "";
 
   $: tip = customTip ? parseFloat(customTip) : tipButton;
-  $: tipAmount = (bill * (tip / 100)) / numberOfPeople || 0;
-  $: total = (bill + tipAmount) / numberOfPeople || 0;
+  $: tipAmount = (bill * (tip / 100)) / (numberOfPeople || 1) || 0;
+  $: total = bill / (numberOfPeople || 1) + tipAmount || 0;
 
   function selectTip(value: number) {
     customTip = "";
@@ -20,17 +20,6 @@
 
     tipButton = 0;
     customTip = targetValue;
-  }
-
-  function handlePeopleInput(event: Event) {
-    const target = event.target as HTMLInputElement;
-    const targetValue = target.value;
-
-    if (targetValue === "") {
-      numberOfPeople = 1;
-    } else {
-      numberOfPeople = parseInt(targetValue);
-    }
   }
 
   function reset() {
@@ -104,9 +93,9 @@
         name="people"
         placeholder="0"
         bind:value={numberOfPeople}
-        on:input={handlePeopleInput}
         min="1"
       />
+
       <img class="input-icon" src="/images/icon-person.svg" alt="person icon" />
     </div>
   </div>
