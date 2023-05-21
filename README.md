@@ -1,6 +1,6 @@
 ## Frontend Mentor Projects
 
-Here are some of the front-end projects that I've built to improve my coding skills. Each project has a name and links to both the GitHub repository and live demo.
+Here are some of the front-end projects that I've built to improve my coding skills.
 
 | No. | Name                          | Technologies     | Code                                                                                          | Demo                                                                                |
 | --- | ----------------------------- | ---------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
